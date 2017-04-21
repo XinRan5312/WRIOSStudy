@@ -14,6 +14,7 @@
 		B030F7CA1EAA0F2C002677F5 /* QXIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B030F7C81EAA0F2C002677F5 /* QXIOS.xcdatamodeld */; };
 		B030F7CC1EAA0F2C002677F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B030F7CB1EAA0F2C002677F5 /* Assets.xcassets */; };
 		B030F7CF1EAA0F2C002677F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B030F7CD1EAA0F2C002677F5 /* LaunchScreen.storyboard */; };
+		B030F7D91EAA102E002677F5 /* QXFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B030F7D81EAA102E002677F5 /* QXFileManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		B030F7CB1EAA0F2C002677F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B030F7CE1EAA0F2C002677F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B030F7D01EAA0F2C002677F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B030F7D71EAA102E002677F5 /* QXFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXFileManager.h; sourceTree = "<group>"; };
+		B030F7D81EAA102E002677F5 /* QXFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXFileManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,7 @@
 		B030F7BB1EAA0F2C002677F5 /* QXIOS */ = {
 			isa = PBXGroup;
 			children = (
+				B030F7D61EAA102E002677F5 /* filemananger */,
 				B030F7BF1EAA0F2C002677F5 /* AppDelegate.h */,
 				B030F7C01EAA0F2C002677F5 /* AppDelegate.m */,
 				B030F7C21EAA0F2C002677F5 /* ViewController.h */,
@@ -80,6 +84,16 @@
 				B030F7BD1EAA0F2C002677F5 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B030F7D61EAA102E002677F5 /* filemananger */ = {
+			isa = PBXGroup;
+			children = (
+				B030F7D71EAA102E002677F5 /* QXFileManager.h */,
+				B030F7D81EAA102E002677F5 /* QXFileManager.m */,
+			);
+			name = filemananger;
+			path = ../../../../fanhai_space/github/QXIOSHttp/filemananger;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +171,7 @@
 				B030F7C11EAA0F2C002677F5 /* AppDelegate.m in Sources */,
 				B030F7CA1EAA0F2C002677F5 /* QXIOS.xcdatamodeld in Sources */,
 				B030F7BE1EAA0F2C002677F5 /* main.m in Sources */,
+				B030F7D91EAA102E002677F5 /* QXFileManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
