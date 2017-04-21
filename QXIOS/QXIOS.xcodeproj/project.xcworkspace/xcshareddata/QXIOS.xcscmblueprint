@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D0C9EB76AF20BDC08DDE573F3FE8A42ACFAE9426",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3351770825C2579F3FBDE3D40AE77E6D2112AE50" : 9223372036854775807,
+    "D0C9EB76AF20BDC08DDE573F3FE8A42ACFAE9426" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9D2E3236-7451-4C21-A0CF-C23EC4103343",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3351770825C2579F3FBDE3D40AE77E6D2112AE50" : "..\/fanhai_space\/github\/QXIOSHttp",
+    "D0C9EB76AF20BDC08DDE573F3FE8A42ACFAE9426" : "WRIOSStudy\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "QXIOS",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "QXIOS\/QXIOS.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/XinRan5312\/QXIOSHttp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3351770825C2579F3FBDE3D40AE77E6D2112AE50"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/XinRan5312\/WRIOSStudy.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D0C9EB76AF20BDC08DDE573F3FE8A42ACFAE9426"
+    }
+  ]
+}
