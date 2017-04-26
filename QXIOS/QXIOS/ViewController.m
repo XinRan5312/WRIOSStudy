@@ -8,9 +8,13 @@
 
 #import "ViewController.h"
 #import "QXWaveControllerViewController.h"
+#import "UIColor+StringColor.h"
 
-@interface ViewController ()
-
+@interface ViewController (){
+    CATextLayer *textLayer;
+    CAGradientLayer *gradientLayer;
+    UIView* bgView;
+}
 @end
 
 @implementation ViewController
@@ -24,6 +28,136 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+   // [self testCALayers];
+    [self testCAGradientLayer];
+    
+}
+//CATextLayer和CAGradientLayer结合动画的使用
+
+-(void)testCAGradientLayer{
+    UIButton *btn=[UIButton buttonWithType:UIButtonTypeCustom];
+//    btn.frame=CGRectMake(0, self.view.frame.size.height - 40, self.view.frame.size.width, 40);
+    [btn setTitle:@"开始动画" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
+    btn.frame=CGRectMake((self.view.frame.size.width-200)/2, self.view.frame.size.width+100, 200, 40);
+     [btn addTarget:self action:@selector(clickBtn) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+    
+    bgView = [[UIView alloc]initWithFrame:CGRectMake(0, 40, self.view.frame.size.width, self.view.frame.size.width)];
+    bgView.backgroundColor = [UIColor brownColor];
+    [self.view addSubview:bgView];
+    
+    textLayer = [CATextLayer layer];
+    textLayer.frame = CGRectMake((bgView.frame.size.width - 200)/2, (bgView.frame.size.width - 200)/2, 200, 200);
+    textLayer.foregroundColor = [UIColor blackColor].CGColor;
+    textLayer.alignmentMode =kCAAlignmentJustified;
+    textLayer.wrapped =YES;
+    UIFont *font = [UIFont systemFontOfSize:30];
+    CFStringRef fontName = (__bridge CFStringRef)font.fontName;
+    CGFontRef fontRef =CGFontCreateWithFontName(fontName);
+    textLayer.font = fontRef;
+    textLayer.fontSize = font.pointSize;
+    CGFontRelease(fontRef);
+    NSString *text =@"敬业 忠诚 奉献 守信 开拓 创新 立志 图强";
+    textLayer.string = text;
+    textLayer.contentsScale = [UIScreen mainScreen].scale;
+    [bgView.layer addSublayer:textLayer];
+    
+    //创建背景图层
+    gradientLayer =  [CAGradientLayer layer];
+    //自己分类了UIColor (StringColor)使其具有把六进制直接转换为UIColor的功能
+    [gradientLayer setColors:[NSArray arrayWithObjects:[UIColor colorFromHexStr:@"0x000000"].CGColor,
+                              [UIColor colorFromHexStr:@"0xFFD700"].CGColor,
+                              [UIColor colorFromHexStr:@"0x000000"].CGColor,
+                              [UIColor colorFromHexStr:@"0xFFD700"].CGColor,
+                              [UIColor colorFromHexStr:@"0x000000"].CGColor,
+                              [UIColor colorFromHexStr:@"0xFFD700"].CGColor,
+                              [UIColor colorFromHexStr:@"0x000000"].CGColor,
+                              [UIColor colorFromHexStr:@"0xFFD700"].CGColor,
+                              [UIColor colorFromHexStr:@"0x000000"].CGColor,
+                              [UIColor colorFromHexStr:@"0xFFD700"].CGColor,
+                              [UIColor colorFromHexStr:@"0x000000"].CGColor,
+                              [UIColor clearColor].CGColor,
+                              nil]];
+    gradientLayer.frame = bgView.bounds;
+    [gradientLayer setLocations:[NSArray arrayWithObjects:
+                                 [NSNumber numberWithFloat:0.0],
+                                 [NSNumber numberWithFloat:0.1],
+                                 [NSNumber numberWithFloat:0.2],
+                                 [NSNumber numberWithFloat:0.3],
+                                 [NSNumber numberWithFloat:0.4],
+                                 [NSNumber numberWithFloat:0.5],
+                                 [NSNumber numberWithFloat:0.6],
+                                 [NSNumber numberWithFloat:0.7],
+                                 [NSNumber numberWithFloat:0.8],
+                                 [NSNumber numberWithFloat:0.9],
+                                 [NSNumber numberWithFloat:1.0],
+                                 nil]];
+    
+    [gradientLayer setStartPoint:CGPointMake(0, 0)];
+    [gradientLayer setEndPoint:CGPointMake(1, 1)];
+    [gradientLayer setMask:textLayer]; //用progressLayer来截取渐变层
+    [bgView.layer addSublayer:gradientLayer];
+
+}
+
+- (void)clickBtn{
+    
+    //两者都移动 由于两者的父布局都是bgView 所以给人的错觉就是都不移动 实现闪烁的动画
+    
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
+    CGPoint fromPoint = textLayer.position;
+    CGPoint toPoint = CGPointMake(fromPoint.x + (bgView.frame.size.width - 200)/2, fromPoint.y);
+    animation.duration = 1;
+    animation.fromValue = [NSValue valueWithCGPoint:fromPoint];
+    animation.toValue = [NSValue valueWithCGPoint:toPoint];
+    animation.autoreverses = YES;
+    animation.repeatCount=100;
+    [textLayer addAnimation:animation forKey:nil];
+    
+    
+    CABasicAnimation *animation2 = [CABasicAnimation animationWithKeyPath:@"position"];
+    CGPoint fromPoint2 = gradientLayer.position;
+    CGPoint toPoint2 = CGPointMake(fromPoint.x - (bgView.frame.size.width - 200)/2, fromPoint.y);
+    animation2.duration = 1;
+    animation2.fromValue = [NSValue valueWithCGPoint:fromPoint2];
+    animation2.toValue = [NSValue valueWithCGPoint:toPoint2];
+    animation2.autoreverses = YES;
+    animation2.repeatCount=100;
+    [gradientLayer addAnimation:animation2 forKey:nil];
+    
+//    //动画
+//    CADisplayLink *dispalyLink=[CADisplayLink displayLinkWithTarget:self selector:@selector(animationContent)];
+//    [dispalyLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
+    
+    
+}
+-(void)animationContent{
+    
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
+    CGPoint fromPoint = textLayer.position;
+    CGPoint toPoint = CGPointMake(fromPoint.x + (bgView.frame.size.width - 200)/2, fromPoint.y);
+    animation.duration = 1;
+    animation.fromValue = [NSValue valueWithCGPoint:fromPoint];
+    animation.toValue = [NSValue valueWithCGPoint:toPoint];
+    animation.autoreverses = YES;
+    animation.repeatCount=100;
+    [textLayer addAnimation:animation forKey:nil];
+    
+    CABasicAnimation *animation2 = [CABasicAnimation animationWithKeyPath:@"position"];
+    CGPoint fromPoint2 = gradientLayer.position;
+    CGPoint toPoint2 = CGPointMake(fromPoint.x - (bgView.frame.size.width - 200)/2, fromPoint.y);
+    animation2.duration = 1;
+    animation2.fromValue = [NSValue valueWithCGPoint:fromPoint2];
+    animation2.toValue = [NSValue valueWithCGPoint:toPoint2];
+    animation2.autoreverses = YES;
+     animation2.repeatCount=100;
+    [gradientLayer addAnimation:animation2 forKey:nil];
+}
+
+//对CAShapeLayer和对CATextLayer的练习
+-(void) testCALayers{
     CAShapeLayer *shapeLayer=[CAShapeLayer layer];
     shapeLayer.lineWidth=3;
     shapeLayer.strokeColor=[UIColor blueColor].CGColor;
@@ -63,22 +197,35 @@
     //把画笔起点移动到CGPointMake(100, 500)
     [linePath moveToPoint:CGPointMake(100, 500)];
     
-     [linePath addLineToPoint:CGPointMake(110, 490)];
-     [linePath addLineToPoint:CGPointMake(120, 480)];
-     [linePath addLineToPoint:CGPointMake(130, 450)];
-     [linePath addLineToPoint:CGPointMake(150, 410)];
-     [linePath addLineToPoint:CGPointMake(170, 450)];
-     [linePath addLineToPoint:CGPointMake(190, 420)];
-     [linePath addLineToPoint:CGPointMake(220, 450)];
+    [linePath addLineToPoint:CGPointMake(110, 490)];
+    [linePath addLineToPoint:CGPointMake(120, 480)];
+    [linePath addLineToPoint:CGPointMake(130, 450)];
+    [linePath addLineToPoint:CGPointMake(150, 410)];
+    [linePath addLineToPoint:CGPointMake(170, 450)];
+    [linePath addLineToPoint:CGPointMake(190, 420)];
+    [linePath addLineToPoint:CGPointMake(220, 450)];
     shapeLayer3.path=linePath.CGPath;
     [self.view.layer addSublayer:shapeLayer3];
     
+    //用CATextLayer画文字
+    
     CATextLayer *textLayer=[CATextLayer layer];
-   
-    
-    
-    
-    
+    textLayer.foregroundColor=[UIColor blueColor].CGColor;
+    textLayer.alignmentMode=kCAAlignmentJustified;
+    textLayer.wrapped=YES;
+    textLayer.frame=CGRectMake(150, 400, 400, 500);
+    UIFont *font=[UIFont systemFontOfSize:11];
+    CFStringRef fontName=(__bridge CFStringRef)font.fontName;
+    CGFontRef fontRef =CGFontCreateWithFontName(fontName);
+    textLayer.font = fontRef;
+    textLayer.fontSize = font.pointSize;
+    CGFontRelease(fontRef);
+    textLayer.string=@"hello just for test";
+    textLayer.contentsScale=[UIScreen mainScreen].scale;//加上这一行字体会清晰好多
+    [self.view.layer addSublayer:textLayer];
+    //    [shaperLayer2 setMask:textLayer];
+
+
 }
 
 

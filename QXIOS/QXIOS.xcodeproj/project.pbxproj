@@ -17,6 +17,7 @@
 		B030F7DC1EAA11C4002677F5 /* QXFileManage.m in Sources */ = {isa = PBXBuildFile; fileRef = B030F7DB1EAA11C4002677F5 /* QXFileManage.m */; };
 		B036AF921EB07CE5000F177E /* QXWaveControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B036AF911EB07CE5000F177E /* QXWaveControllerViewController.m */; };
 		B036AF951EB07D6A000F177E /* QXWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = B036AF941EB07D6A000F177E /* QXWaveView.m */; };
+		B036AF981EB09F16000F177E /* UIColor+StringColor.m in Sources */ = {isa = PBXBuildFile; fileRef = B036AF971EB09F16000F177E /* UIColor+StringColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		B036AF911EB07CE5000F177E /* QXWaveControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXWaveControllerViewController.m; sourceTree = "<group>"; };
 		B036AF931EB07D6A000F177E /* QXWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXWaveView.h; sourceTree = "<group>"; };
 		B036AF941EB07D6A000F177E /* QXWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXWaveView.m; sourceTree = "<group>"; };
+		B036AF961EB09F16000F177E /* UIColor+StringColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+StringColor.h"; sourceTree = "<group>"; };
+		B036AF971EB09F16000F177E /* UIColor+StringColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+StringColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				B036AF911EB07CE5000F177E /* QXWaveControllerViewController.m */,
 				B036AF931EB07D6A000F177E /* QXWaveView.h */,
 				B036AF941EB07D6A000F177E /* QXWaveView.m */,
+				B036AF961EB09F16000F177E /* UIColor+StringColor.h */,
+				B036AF971EB09F16000F177E /* UIColor+StringColor.m */,
 			);
 			path = QXIOS;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 				B030F7CA1EAA0F2C002677F5 /* QXIOS.xcdatamodeld in Sources */,
 				B030F7DC1EAA11C4002677F5 /* QXFileManage.m in Sources */,
 				B036AF921EB07CE5000F177E /* QXWaveControllerViewController.m in Sources */,
+				B036AF981EB09F16000F177E /* UIColor+StringColor.m in Sources */,
 				B030F7BE1EAA0F2C002677F5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
