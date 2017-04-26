@@ -15,6 +15,8 @@
 		B030F7CC1EAA0F2C002677F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B030F7CB1EAA0F2C002677F5 /* Assets.xcassets */; };
 		B030F7CF1EAA0F2C002677F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B030F7CD1EAA0F2C002677F5 /* LaunchScreen.storyboard */; };
 		B030F7DC1EAA11C4002677F5 /* QXFileManage.m in Sources */ = {isa = PBXBuildFile; fileRef = B030F7DB1EAA11C4002677F5 /* QXFileManage.m */; };
+		B036AF921EB07CE5000F177E /* QXWaveControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B036AF911EB07CE5000F177E /* QXWaveControllerViewController.m */; };
+		B036AF951EB07D6A000F177E /* QXWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = B036AF941EB07D6A000F177E /* QXWaveView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,10 @@
 		B030F7D01EAA0F2C002677F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B030F7DA1EAA11C4002677F5 /* QXFileManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXFileManage.h; sourceTree = "<group>"; };
 		B030F7DB1EAA11C4002677F5 /* QXFileManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXFileManage.m; sourceTree = "<group>"; };
+		B036AF901EB07CE5000F177E /* QXWaveControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXWaveControllerViewController.h; sourceTree = "<group>"; };
+		B036AF911EB07CE5000F177E /* QXWaveControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXWaveControllerViewController.m; sourceTree = "<group>"; };
+		B036AF931EB07D6A000F177E /* QXWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXWaveView.h; sourceTree = "<group>"; };
+		B036AF941EB07D6A000F177E /* QXWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXWaveView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,10 @@
 				B030F7BC1EAA0F2C002677F5 /* Supporting Files */,
 				B030F7DA1EAA11C4002677F5 /* QXFileManage.h */,
 				B030F7DB1EAA11C4002677F5 /* QXFileManage.m */,
+				B036AF901EB07CE5000F177E /* QXWaveControllerViewController.h */,
+				B036AF911EB07CE5000F177E /* QXWaveControllerViewController.m */,
+				B036AF931EB07D6A000F177E /* QXWaveView.h */,
+				B036AF941EB07D6A000F177E /* QXWaveView.m */,
 			);
 			path = QXIOS;
 			sourceTree = "<group>";
@@ -158,10 +168,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B036AF951EB07D6A000F177E /* QXWaveView.m in Sources */,
 				B030F7C41EAA0F2C002677F5 /* ViewController.m in Sources */,
 				B030F7C11EAA0F2C002677F5 /* AppDelegate.m in Sources */,
 				B030F7CA1EAA0F2C002677F5 /* QXIOS.xcdatamodeld in Sources */,
 				B030F7DC1EAA11C4002677F5 /* QXFileManage.m in Sources */,
+				B036AF921EB07CE5000F177E /* QXWaveControllerViewController.m in Sources */,
 				B030F7BE1EAA0F2C002677F5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,6 +331,7 @@
 				B030F7D51EAA0F2C002677F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
