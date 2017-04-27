@@ -18,6 +18,8 @@
 		B036AF921EB07CE5000F177E /* QXWaveControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B036AF911EB07CE5000F177E /* QXWaveControllerViewController.m */; };
 		B036AF951EB07D6A000F177E /* QXWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = B036AF941EB07D6A000F177E /* QXWaveView.m */; };
 		B036AF981EB09F16000F177E /* UIColor+StringColor.m in Sources */ = {isa = PBXBuildFile; fileRef = B036AF971EB09F16000F177E /* UIColor+StringColor.m */; };
+		B036AF9B1EB1D06E000F177E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B036AF9A1EB1D06E000F177E /* CoreGraphics.framework */; };
+		B036AF9D1EB1D08F000F177E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B036AF9C1EB1D08F000F177E /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		B036AF941EB07D6A000F177E /* QXWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXWaveView.m; sourceTree = "<group>"; };
 		B036AF961EB09F16000F177E /* UIColor+StringColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+StringColor.h"; sourceTree = "<group>"; };
 		B036AF971EB09F16000F177E /* UIColor+StringColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+StringColor.m"; sourceTree = "<group>"; };
+		B036AF9A1EB1D06E000F177E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B036AF9C1EB1D08F000F177E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B036AF9D1EB1D08F000F177E /* QuartzCore.framework in Frameworks */,
+				B036AF9B1EB1D06E000F177E /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +64,7 @@
 			children = (
 				B030F7BB1EAA0F2C002677F5 /* QXIOS */,
 				B030F7BA1EAA0F2C002677F5 /* Products */,
+				B036AF991EB1D06E000F177E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +107,15 @@
 				B030F7BD1EAA0F2C002677F5 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B036AF991EB1D06E000F177E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B036AF9C1EB1D08F000F177E /* QuartzCore.framework */,
+				B036AF9A1EB1D06E000F177E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

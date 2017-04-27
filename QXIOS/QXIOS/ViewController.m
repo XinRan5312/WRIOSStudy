@@ -30,8 +30,44 @@
     
    // [self testCALayers];
 //    [self testCAGradientLayer];
-    [self testBezierPath];
+//    [self testBezierPath];
+    [self testCABaseAnimation];
     
+}
+//练习CABaseAnimation
+-(void) testCABaseAnimation{
+
+    UILabel *lable=[[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/3, 100, 200, 100)];
+    lable.text=@"测试CABaseAnimation";
+    lable.textAlignment=NSTextAlignmentCenter;
+    lable.backgroundColor=[UIColor redColor];
+    [self.view addSubview:lable];
+    
+    CABasicAnimation *baseAnimation=[CABasicAnimation animationWithKeyPath:@"position"];
+    CGPoint start=lable.center;
+    CGPoint end=CGPointMake(start.x+100, start.y+100);
+    baseAnimation.fromValue=[NSValue valueWithCGPoint:start];
+    baseAnimation.toValue=[NSValue valueWithCGPoint:end];
+    baseAnimation.duration=2;
+    //baseAnimation.removedOnCompletion=NO;//在动画执行完成之后，最好还是将动画移除掉。也就是尽量不要设置removedOnCompletion属性为NO
+    /**
+     一般动画完成后都会回到原来的状态
+     解释：为什么动画结束后返回原状态？
+     首先我们需要搞明白一点的是，layer动画运行的过程是怎样的？其实在我们给一个视图添加layer动画时，真正移动并不是我们的视图本身，而是 presentation layer 的一个缓存。动画开始时 presentation layer开始移动，原始layer隐藏，动画结束时，presentation layer从屏幕上移除，原始layer显示。这就解释了为什么我们的视图在动画结束后又回到了原来的状态，因为它根本就没动过。
+     
+     这个同样也可以解释为什么在动画移动过程中，我们为何不能对其进行任何操作。
+     
+     所以在我们完成layer动画之后，最好将我们的layer属性设置为我们最终状态的属性，然后将presentation layer 移除掉。
+     */
+    //只需设置removedOnCompletion、fillMode两个属性如下就可以不让动画完成后回到原来的状态了
+    
+    baseAnimation.removedOnCompletion = NO;
+    baseAnimation.fillMode = kCAFillModeForwards;//fileMode有好几个不同的值代表不同的意思
+    
+    baseAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];//设置动画的插值器
+
+    [lable.layer addAnimation:baseAnimation forKey:@"lable1"];
+
 }
 //正统的UIBezierPath曲线
 
