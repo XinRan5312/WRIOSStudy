@@ -29,8 +29,91 @@
     // Do any additional setup after loading the view, typically from a nib.
     
    // [self testCALayers];
-    [self testCAGradientLayer];
+//    [self testCAGradientLayer];
+    [self testBezierPath];
     
+}
+//正统的UIBezierPath曲线
+
+-(void)testBezierPath{
+    CAShapeLayer *layer1=[CAShapeLayer layer];
+    layer1.lineWidth=3;
+    layer1.strokeColor=[UIColor brownColor].CGColor;
+    layer1.fillColor=[UIColor clearColor].CGColor;
+    
+    UIBezierPath *circlePath=[UIBezierPath bezierPathWithOvalInRect:CGRectMake(100, 100, 200, 200)];
+    
+    //构造一个子路径
+    UIBezierPath *sonPath=[UIBezierPath bezierPath];
+    [sonPath moveToPoint:CGPointMake(100, 200)];
+    [sonPath addLineToPoint:CGPointMake(300, 200)];
+    
+    //把字Path添加到父Path中
+    [circlePath appendPath:sonPath];
+    
+    //再创建个子路径
+    
+    UIBezierPath *son1=[UIBezierPath bezierPath];
+    [son1 moveToPoint:CGPointMake(200, 100)];
+    [son1 addLineToPoint:CGPointMake(200, 300)];
+    
+     //把字Path添加到父Path中
+    [circlePath appendPath:son1];
+    
+    layer1.path=circlePath.CGPath;
+    
+    [self.view.layer addSublayer:layer1];
+    
+    //直接利用一个Path拼接图形
+    
+    CAShapeLayer *layer2=[CAShapeLayer layer];
+    
+    layer2.lineWidth=3;
+    layer2.strokeColor=[UIColor blueColor].CGColor;
+    layer2.fillColor=[UIColor clearColor].CGColor;
+    
+    UIBezierPath *bezier=[UIBezierPath bezierPath];
+    
+    //先画一个90度的圆弧
+    
+    [bezier addArcWithCenter:CGPointMake(200, 400) radius:50 startAngle:0 endAngle:M_PI_2 clockwise:YES];
+    
+    //在拼接一条直线
+    [bezier addLineToPoint:CGPointMake(150, 350)];
+    
+    layer2.path=bezier.CGPath;
+    [self.view.layer addSublayer:layer2];
+    
+    //画一条真正的贝塞尔曲线
+    CAShapeLayer *shaper3=[CAShapeLayer layer];
+    shaper3.lineWidth=3;
+    shaper3.strokeColor=[UIColor yellowColor].CGColor;
+    
+    UIBezierPath *bezier2=[UIBezierPath bezierPath];
+    
+    [bezier2 moveToPoint:CGPointMake(100, 400)];
+    [bezier2 addCurveToPoint:CGPointMake(200, 500) controlPoint1:CGPointMake(50, 460) controlPoint2:CGPointMake(200, 420)];
+    shaper3.path=bezier2.CGPath;
+    //贝塞尔曲线的起点是(100, 400) 中间两个平滑拐弯点分别是(50, 460)和(200, 420)
+    
+    [self.view.layer addSublayer:shaper3];
+    
+    CAGradientLayer *gradientLayer=[CAGradientLayer layer];
+    gradientLayer.frame=CGRectMake(100, 520, 200, 100);
+    
+    gradientLayer.colors=[NSArray arrayWithObjects:[UIColor redColor].CGColor,
+                          [UIColor blueColor].CGColor,[UIColor yellowColor].CGColor,
+                          [UIColor redColor].CGColor,
+                          [UIColor blueColor].CGColor,[UIColor yellowColor].CGColor,nil];
+    gradientLayer.locations=[NSArray arrayWithObjects:[NSNumber numberWithFloat:0],
+                             [NSNumber numberWithFloat:0.15],[NSNumber numberWithFloat:0.3],
+                             [NSNumber numberWithFloat:0.45],[NSNumber numberWithFloat:0.6],
+                             [NSNumber numberWithFloat:0.8],[NSNumber numberWithFloat:1],nil];
+    gradientLayer.startPoint=CGPointMake(0, 0);
+    gradientLayer.endPoint=CGPointMake(1, 1);
+    [self.view.layer addSublayer:gradientLayer];
+    
+ 
 }
 //CATextLayer和CAGradientLayer结合动画的使用
 
