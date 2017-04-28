@@ -30,9 +30,104 @@
     
    // [self testCALayers];
 //    [self testCAGradientLayer];
-//    [self testBezierPath];
-    [self testCABaseAnimation];
+    //[self testBezierPath];
+    //[self testCABaseAnimation];
+    //[self bezierXuan];
+    [self testPathAnimation];
     
+}
+//练习Layer的path属性的动画现象 结合CABaseAnimation的keyPath属性动画
+
+-(void)testPathAnimation{
+    CAShapeLayer *layer=[CAShapeLayer layer];
+    layer.lineWidth=3;
+    layer.strokeColor=[UIColor yellowColor].CGColor;
+    layer.fillColor=[UIColor yellowColor].CGColor;
+    
+    //上面的path
+    UIBezierPath *fromPath=[UIBezierPath bezierPath];
+    
+    [fromPath moveToPoint:CGPointMake(100, 100)];
+    [fromPath addLineToPoint:CGPointMake(100, 350)];
+    //这个弧线是从CGPointMake(100, 350)到CGPointMake(400, 350)中间有两个拐点 这样就确定了4个点，最终在这4个点之间华哥弧线
+    [fromPath addCurveToPoint:CGPointMake(400, 350) controlPoint1:CGPointMake(200, 300) controlPoint2:CGPointMake(300, 390)];//画一条不规则弧线
+    [fromPath addLineToPoint:CGPointMake(400, 100)];
+    
+    [fromPath closePath];//连接路径的起点和终点 封闭
+    
+    //下面的path
+    UIBezierPath *toPath=[UIBezierPath bezierPath];
+    
+    [toPath moveToPoint:CGPointMake(100, 100)];
+    [toPath addLineToPoint:CGPointMake(100, 600)];
+    [toPath addCurveToPoint:CGPointMake(400, 600) controlPoint1:CGPointMake(200, 550) controlPoint2:CGPointMake(300, 640)];
+    [toPath addLineToPoint:CGPointMake(400, 100)];
+    [toPath closePath];
+    
+    
+    layer.path=fromPath.CGPath;
+    
+    
+    [self.view.layer addSublayer:layer];
+    
+    
+    CABasicAnimation *ani=[CABasicAnimation animation];
+    ani.keyPath=@"path";
+    ani.duration=6;
+    ani.fromValue=(__bridge id)fromPath.CGPath;
+    
+    layer.path=toPath.CGPath;
+    
+    [layer addAnimation:ani forKey:nil];
+    
+    
+
+}
+//利用Beizer曲线画正余玄 并且练习strokeStart和strokeEnd的动画效果
+-(void)bezierXuan{
+    
+    UIView *view=[[UIView alloc] initWithFrame:CGRectMake(100, 100, 500, 300)];
+    view.backgroundColor=[UIColor clearColor];
+    [self.view addSubview:view];
+    int height=150;//逢高
+    int width=300;
+    CAShapeLayer *layer=[CAShapeLayer layer];
+    layer.lineWidth=3;
+    layer.strokeColor=[UIColor yellowColor].CGColor;
+    layer.fillColor=[UIColor clearColor].CGColor;
+    
+    
+    UIBezierPath *bezier=[UIBezierPath bezierPath];
+    
+    [bezier moveToPoint:CGPointMake(0, height/2)];
+    for(int i=0;i<width;i++){
+    
+        CGFloat y=height/2+height/2 *sin(2*M_PI*i/100);
+        
+        [bezier addLineToPoint:CGPointMake(i, height-y)];
+        
+    }
+
+    layer.path=bezier.CGPath;
+    
+    //添加动画 strokeStart代表绘制开始的地方范围[0,1] strokeEnd 代表绘制结束的地方
+    
+    CABasicAnimation *ani=[CABasicAnimation animation];
+//    ani.keyPath=@"strokeStart";
+//    ani.duration=3;
+////    ani.fromValue=@0;
+//     ani.fromValue=@1;
+//    ani.repeatCount=10000;
+//    //layer.strokeStart=1;
+//     layer.strokeStart=0;
+    ani.keyPath=@"strokeEnd";
+    ani.duration=3;
+    ani.fromValue=@0;
+    ani.repeatCount=10;
+    [layer addAnimation:ani forKey:nil];
+    [view.layer addSublayer:layer];
+    
+
 }
 //练习CABaseAnimation
 -(void) testCABaseAnimation{
