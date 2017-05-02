@@ -33,8 +33,47 @@
     //[self testBezierPath];
     //[self testCABaseAnimation];
     //[self bezierXuan];
-    [self testPathAnimation];
+    //[self testPathAnimation];
+    [self testMaskLayer];
     
+}
+//练习maskLayer  蒙版
+
+-(void)testMaskLayer{
+    CALayer *layer=[CALayer layer];
+    layer.frame=CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    layer.contents=(__bridge id)[UIImage imageNamed:@"big_one"].CGImage;
+    [self.view.layer addSublayer:layer];
+    
+    CAShapeLayer *maskLayer=[CAShapeLayer layer];
+    maskLayer.lineWidth=8;
+    maskLayer.strokeColor=[UIColor blueColor].CGColor;
+    
+//    maskLayer.fillColor=[UIColor clearColor].CGColor;//加上他就没有了中间的只有lineWidth=8
+    
+    UIBezierPath *bezier=[UIBezierPath bezierPath];
+    
+    
+    [bezier moveToPoint:CGPointMake(200, 150)];
+    [bezier addLineToPoint:CGPointMake(220, 170)];
+//    [bezier addQuadCurveToPoint:CGPointMake(320, 170) controlPoint:CGPointMake(200, 250)];
+//    [bezier addCurveToPoint:CGPointMake(320, 170) controlPoint1:CGPointMake(200, 120) controlPoint2:CGPointMake(280, 250)];
+    [bezier addArcWithCenter:CGPointMake(200, 150) radius:169.7 startAngle:M_PI/4 endAngle:M_PI*3/4 clockwise:YES];
+    [bezier closePath];
+   
+    maskLayer.path=bezier.CGPath;
+    //添加一个动画
+    
+    CABasicAnimation *ani=[CABasicAnimation animation];
+    ani.keyPath=@"strokeStart";
+    ani.fromValue=@0;
+    ani.duration=3;
+    ani.toValue=@1;
+    [maskLayer addAnimation:ani forKey:nil];
+    
+    layer.mask=maskLayer;
+    
+
 }
 //练习Layer的path属性的动画现象 结合CABaseAnimation的keyPath属性动画
 
