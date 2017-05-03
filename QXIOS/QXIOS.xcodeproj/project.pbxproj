@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B012B04D1EB9A54100844E05 /* bookdemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B012B04C1EB9A54100844E05 /* bookdemo.storyboard */; };
+		B012B0511EB9A5B200844E05 /* SimpleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B012B04F1EB9A5B200844E05 /* SimpleViewController.m */; };
+		B012B0521EB9A5B200844E05 /* SimpleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B012B0501EB9A5B200844E05 /* SimpleViewController.xib */; };
+		B012B0551EB9ADB800844E05 /* SimpleViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = B012B0541EB9ADB800844E05 /* SimpleViewController2.m */; };
+		B012B0581EB9B90300844E05 /* SegueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B012B0571EB9B90300844E05 /* SegueViewController.m */; };
 		B030F7BE1EAA0F2C002677F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B030F7BD1EAA0F2C002677F5 /* main.m */; };
 		B030F7C11EAA0F2C002677F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B030F7C01EAA0F2C002677F5 /* AppDelegate.m */; };
 		B030F7C41EAA0F2C002677F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B030F7C31EAA0F2C002677F5 /* ViewController.m */; };
@@ -23,6 +28,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B012B04C1EB9A54100844E05 /* bookdemo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = bookdemo.storyboard; sourceTree = "<group>"; };
+		B012B04E1EB9A5B200844E05 /* SimpleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleViewController.h; sourceTree = "<group>"; };
+		B012B04F1EB9A5B200844E05 /* SimpleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleViewController.m; sourceTree = "<group>"; };
+		B012B0501EB9A5B200844E05 /* SimpleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleViewController.xib; sourceTree = "<group>"; };
+		B012B0531EB9ADB800844E05 /* SimpleViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleViewController2.h; sourceTree = "<group>"; };
+		B012B0541EB9ADB800844E05 /* SimpleViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleViewController2.m; sourceTree = "<group>"; };
+		B012B0561EB9B90300844E05 /* SegueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegueViewController.h; sourceTree = "<group>"; };
+		B012B0571EB9B90300844E05 /* SegueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegueViewController.m; sourceTree = "<group>"; };
 		B030F7B91EAA0F2C002677F5 /* QXIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QXIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B030F7BD1EAA0F2C002677F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B030F7BF1EAA0F2C002677F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -59,6 +72,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B012B04B1EB99FFA00844E05 /* bookdemo */ = {
+			isa = PBXGroup;
+			children = (
+				B012B04C1EB9A54100844E05 /* bookdemo.storyboard */,
+				B012B04E1EB9A5B200844E05 /* SimpleViewController.h */,
+				B012B04F1EB9A5B200844E05 /* SimpleViewController.m */,
+				B012B0501EB9A5B200844E05 /* SimpleViewController.xib */,
+				B012B0531EB9ADB800844E05 /* SimpleViewController2.h */,
+				B012B0541EB9ADB800844E05 /* SimpleViewController2.m */,
+				B012B0561EB9B90300844E05 /* SegueViewController.h */,
+				B012B0571EB9B90300844E05 /* SegueViewController.m */,
+			);
+			path = bookdemo;
+			sourceTree = "<group>";
+		};
 		B030F7B01EAA0F2C002677F5 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +107,7 @@
 		B030F7BB1EAA0F2C002677F5 /* QXIOS */ = {
 			isa = PBXGroup;
 			children = (
+				B012B04B1EB99FFA00844E05 /* bookdemo */,
 				B030F7BF1EAA0F2C002677F5 /* AppDelegate.h */,
 				B030F7C01EAA0F2C002677F5 /* AppDelegate.m */,
 				B030F7C21EAA0F2C002677F5 /* ViewController.h */,
@@ -178,6 +207,8 @@
 			files = (
 				B030F7CF1EAA0F2C002677F5 /* LaunchScreen.storyboard in Resources */,
 				B030F7CC1EAA0F2C002677F5 /* Assets.xcassets in Resources */,
+				B012B0521EB9A5B200844E05 /* SimpleViewController.xib in Resources */,
+				B012B04D1EB9A54100844E05 /* bookdemo.storyboard in Resources */,
 				B030F7C71EAA0F2C002677F5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,7 +221,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B036AF951EB07D6A000F177E /* QXWaveView.m in Sources */,
+				B012B0551EB9ADB800844E05 /* SimpleViewController2.m in Sources */,
+				B012B0511EB9A5B200844E05 /* SimpleViewController.m in Sources */,
 				B030F7C41EAA0F2C002677F5 /* ViewController.m in Sources */,
+				B012B0581EB9B90300844E05 /* SegueViewController.m in Sources */,
 				B030F7C11EAA0F2C002677F5 /* AppDelegate.m in Sources */,
 				B030F7CA1EAA0F2C002677F5 /* QXIOS.xcdatamodeld in Sources */,
 				B030F7DC1EAA11C4002677F5 /* QXFileManage.m in Sources */,

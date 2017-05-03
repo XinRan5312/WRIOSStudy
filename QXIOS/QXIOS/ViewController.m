@@ -31,13 +31,18 @@
    // [self testCALayers];
 //    [self testCAGradientLayer];
     //[self testBezierPath];
-    //[self testCABaseAnimation];
+    //[self testCABaseAnimation2];
     //[self bezierXuan];
     //[self testPathAnimation];
     [self testMaskLayer];
     
 }
 //练习maskLayer  蒙版
+/**
+ 一个CALayer或者其子类作A为另一个CALayer或者其子类B的mask属性来使用，就是蒙版
+ 这样的B就只会显示出A外形范围那么到的部分，其它的B的部分都会隐藏
+ 
+ */
 
 -(void)testMaskLayer{
     CALayer *layer=[CALayer layer];
@@ -62,14 +67,14 @@
     [bezier closePath];
    
     maskLayer.path=bezier.CGPath;
-    //添加一个动画
-    
-    CABasicAnimation *ani=[CABasicAnimation animation];
-    ani.keyPath=@"strokeStart";
-    ani.fromValue=@0;
-    ani.duration=3;
-    ani.toValue=@1;
-    [maskLayer addAnimation:ani forKey:nil];
+//    //添加一个动画
+//    
+//    CABasicAnimation *ani=[CABasicAnimation animation];
+//    ani.keyPath=@"strokeStart";
+//    ani.fromValue=@0;
+//    ani.duration=3;
+//    ani.toValue=@1;
+//    [maskLayer addAnimation:ani forKey:nil];
     
     layer.mask=maskLayer;
     
@@ -114,7 +119,7 @@
     ani.keyPath=@"path";
     ani.duration=6;
     ani.fromValue=(__bridge id)fromPath.CGPath;
-    
+    //没有把toPath给toValue而是直接给了CABaseAnimation属性动画的两个重要部分的，隐藏功臣属性Modle，这样就保证了跟另外一个重要部分，视图Modle的数据的同步
     layer.path=toPath.CGPath;
     
     [layer addAnimation:ani forKey:nil];
@@ -194,6 +199,7 @@
      所以在我们完成layer动画之后，最好将我们的layer属性设置为我们最终状态的属性，然后将presentation layer 移除掉。
      */
     //只需设置removedOnCompletion、fillMode两个属性如下就可以不让动画完成后回到原来的状态了
+    //此时只是视图最后一帧留在了动画结束的位置，而lable的属性数据还是动画前的，只是视图走了而已，所以所有的事件响应还在原先的位置
     
     baseAnimation.removedOnCompletion = NO;
     baseAnimation.fillMode = kCAFillModeForwards;//fileMode有好几个不同的值代表不同的意思
@@ -202,6 +208,43 @@
 
     [lable.layer addAnimation:baseAnimation forKey:@"lable1"];
 
+}
+-(void) testCABaseAnimation2{
+    
+    UILabel *lable=[[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/3, 100, 200, 100)];
+    lable.text=@"测试CABaseAnimation";
+    lable.textAlignment=NSTextAlignmentCenter;
+    lable.backgroundColor=[UIColor redColor];
+    [self.view addSubview:lable];
+  
+    CABasicAnimation *baseAnimation=[CABasicAnimation animationWithKeyPath:@"position"];
+    CGPoint start=lable.center;
+    CGPoint end=CGPointMake(start.x+100, start.y+100);
+    
+      lable.center=end;
+    baseAnimation.fromValue=[NSValue valueWithCGPoint:start];
+//    baseAnimation.toValue=[NSValue valueWithCGPoint:end];
+    baseAnimation.duration=2;
+    //baseAnimation.removedOnCompletion=NO;//在动画执行完成之后，最好还是将动画移除掉。也就是尽量不要设置removedOnCompletion属性为NO
+    /**
+     一般动画完成后都会回到原来的状态
+     解释：为什么动画结束后返回原状态？
+     首先我们需要搞明白一点的是，layer动画运行的过程是怎样的？其实在我们给一个视图添加layer动画时，真正移动并不是我们的视图本身，而是 presentation layer 的一个缓存。动画开始时 presentation layer开始移动，原始layer隐藏，动画结束时，presentation layer从屏幕上移除，原始layer显示。这就解释了为什么我们的视图在动画结束后又回到了原来的状态，因为它根本就没动过。
+     
+     这个同样也可以解释为什么在动画移动过程中，我们为何不能对其进行任何操作。
+     
+     所以在我们完成layer动画之后，最好将我们的layer属性设置为我们最终状态的属性，然后将presentation layer 移除掉。
+     */
+    //只需设置removedOnCompletion、fillMode两个属性如下就可以不让动画完成后回到原来的状态了
+    //此时只是视图最后一帧留在了动画结束的位置，而lable的属性数据还是动画前的，只是视图走了而已，所以所有的事件响应还在原先的位置，我们可以通过把属性数据也该到动画结束的位置，跟视图同步，这样就解决这个问题：就是不设置baseAnimation.toValue，注释掉，把它的值直接给UIView   lable.center=end;
+    
+    baseAnimation.removedOnCompletion = NO;
+    baseAnimation.fillMode = kCAFillModeForwards;//fileMode有好几个不同的值代表不同的意思
+    
+    baseAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];//设置动画的插值器
+    
+    [lable.layer addAnimation:baseAnimation forKey:@"lable1"];
+    
 }
 //正统的UIBezierPath曲线
 
@@ -643,5 +686,12 @@
 //    NSLog(@"%@stop",aniID);
 //}
 //
+-(void)testUIViewAndCALayer{
+
+    UILabel *lable=[[UILabel alloc] init];
+    lable.frame=CGRectMake(0, 0, 200, 60);//间接操作UIView的代理CALayer功能，然后绘画相应的属性值
+    lable.backgroundColor=[UIColor redColor];
+    lable.layer.cornerRadius=2;//直接操作UIView的CALayer，绘画出相应的属性值
+}
 
 @end

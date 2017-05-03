@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SimpleViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    SimpleViewController *simple=[[SimpleViewController alloc]init];
+    self.window=[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor=[UIColor whiteColor];
+    self.window.rootViewController=simple;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
