@@ -1,0 +1,15 @@
+
+/* Class = "UITabBarItem"; title = "Item 2"; ObjectID = "2Gt-sr-k2a"; */
+"2Gt-sr-k2a.title" = "Item 2";
+
+/* Class = "UITabBarItem"; title = "Item 1"; ObjectID = "9dR-Rc-fwO"; */
+"9dR-Rc-fwO.title" = "Item 1";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "BcH-Zf-b9B"; */
+"BcH-Zf-b9B.title" = "Item";
+
+/* Class = "UILabel"; text = "CoreAnimation"; ObjectID = "TNO-aN-tnH"; */
+"TNO-aN-tnH.text" = "CoreAnimation";
+
+/* Class = "UIButton"; normalTitle = "波浪动画"; ObjectID = "zdM-ax-MjE"; */
+"zdM-ax-MjE.normalTitle" = "波浪动画";

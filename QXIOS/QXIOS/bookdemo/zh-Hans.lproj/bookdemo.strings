@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "利用Segue实现跳转"; ObjectID = "9Ps-VU-vAs"; */
+"9Ps-VU-vAs.text" = "利用Segue实现跳转";
+
+/* Class = "UIViewController"; title = "HELLO"; ObjectID = "Tcn-7d-ydJ"; */
+"Tcn-7d-ydJ.title" = "HELLO";
+
+/* Class = "UINavigationItem"; prompt = "QX"; ObjectID = "uK8-bF-Xlm"; */
+"uK8-bF-Xlm.prompt" = "QX";
+
+/* Class = "UINavigationItem"; title = "WR"; ObjectID = "uK8-bF-Xlm"; */
+"uK8-bF-Xlm.title" = "WR";
+
+/* Class = "UIButton"; normalTitle = "Simple2"; ObjectID = "wKZ-9A-nQd"; */
+"wKZ-9A-nQd.normalTitle" = "Simple2";
+
+/* Class = "UIBarButtonItem"; title = "button"; ObjectID = "ySL-hB-Pgv"; */
+"ySL-hB-Pgv.title" = "button";

@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B012B04D1EB9A54100844E05 /* bookdemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B012B04C1EB9A54100844E05 /* bookdemo.storyboard */; };
 		B012B0511EB9A5B200844E05 /* SimpleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B012B04F1EB9A5B200844E05 /* SimpleViewController.m */; };
 		B012B0521EB9A5B200844E05 /* SimpleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B012B0501EB9A5B200844E05 /* SimpleViewController.xib */; };
 		B012B0551EB9ADB800844E05 /* SimpleViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = B012B0541EB9ADB800844E05 /* SimpleViewController2.m */; };
 		B012B0581EB9B90300844E05 /* SegueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B012B0571EB9B90300844E05 /* SegueViewController.m */; };
+		B012B0691EBACD9000844E05 /* bookdemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B012B06B1EBACD9000844E05 /* bookdemo.storyboard */; };
+		B012B0751EBAF12500844E05 /* qx.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B012B0741EBAF12500844E05 /* qx.bundle */; };
+		B012B0781EBB21B400844E05 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = B012B0771EBB21B400844E05 /* CustomView.m */; };
 		B030F7BE1EAA0F2C002677F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B030F7BD1EAA0F2C002677F5 /* main.m */; };
 		B030F7C11EAA0F2C002677F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B030F7C01EAA0F2C002677F5 /* AppDelegate.m */; };
 		B030F7C41EAA0F2C002677F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B030F7C31EAA0F2C002677F5 /* ViewController.m */; };
@@ -28,7 +30,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B012B04C1EB9A54100844E05 /* bookdemo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = bookdemo.storyboard; sourceTree = "<group>"; };
 		B012B04E1EB9A5B200844E05 /* SimpleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleViewController.h; sourceTree = "<group>"; };
 		B012B04F1EB9A5B200844E05 /* SimpleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleViewController.m; sourceTree = "<group>"; };
 		B012B0501EB9A5B200844E05 /* SimpleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleViewController.xib; sourceTree = "<group>"; };
@@ -36,6 +37,19 @@
 		B012B0541EB9ADB800844E05 /* SimpleViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleViewController2.m; sourceTree = "<group>"; };
 		B012B0561EB9B90300844E05 /* SegueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegueViewController.h; sourceTree = "<group>"; };
 		B012B0571EB9B90300844E05 /* SegueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegueViewController.m; sourceTree = "<group>"; };
+		B012B0591EBABFB500844E05 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		B012B05A1EBABFB500844E05 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		B012B05B1EBAC0BD00844E05 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		B012B05C1EBAC0BD00844E05 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		B012B05E1EBAC16400844E05 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		B012B0601EBAC8FB00844E05 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		B012B06A1EBACD9000844E05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/bookdemo.storyboard; sourceTree = "<group>"; };
+		B012B06D1EBACD9600844E05 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/bookdemo.strings; sourceTree = "<group>"; };
+		B012B06F1EBACD9700844E05 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/bookdemo.strings"; sourceTree = "<group>"; };
+		B012B0711EBACD9800844E05 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/bookdemo.strings; sourceTree = "<group>"; };
+		B012B0741EBAF12500844E05 /* qx.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = qx.bundle; sourceTree = "<group>"; };
+		B012B0761EBB21B400844E05 /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		B012B0771EBB21B400844E05 /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 		B030F7B91EAA0F2C002677F5 /* QXIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QXIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B030F7BD1EAA0F2C002677F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B030F7BF1EAA0F2C002677F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -75,7 +89,7 @@
 		B012B04B1EB99FFA00844E05 /* bookdemo */ = {
 			isa = PBXGroup;
 			children = (
-				B012B04C1EB9A54100844E05 /* bookdemo.storyboard */,
+				B012B06B1EBACD9000844E05 /* bookdemo.storyboard */,
 				B012B04E1EB9A5B200844E05 /* SimpleViewController.h */,
 				B012B04F1EB9A5B200844E05 /* SimpleViewController.m */,
 				B012B0501EB9A5B200844E05 /* SimpleViewController.xib */,
@@ -83,6 +97,8 @@
 				B012B0541EB9ADB800844E05 /* SimpleViewController2.m */,
 				B012B0561EB9B90300844E05 /* SegueViewController.h */,
 				B012B0571EB9B90300844E05 /* SegueViewController.m */,
+				B012B0761EBB21B400844E05 /* CustomView.h */,
+				B012B0771EBB21B400844E05 /* CustomView.m */,
 			);
 			path = bookdemo;
 			sourceTree = "<group>";
@@ -126,6 +142,7 @@
 				B036AF941EB07D6A000F177E /* QXWaveView.m */,
 				B036AF961EB09F16000F177E /* UIColor+StringColor.h */,
 				B036AF971EB09F16000F177E /* UIColor+StringColor.m */,
+				B012B0741EBAF12500844E05 /* qx.bundle */,
 			);
 			path = QXIOS;
 			sourceTree = "<group>";
@@ -189,6 +206,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				de,
 			);
 			mainGroup = B030F7B01EAA0F2C002677F5;
 			productRefGroup = B030F7BA1EAA0F2C002677F5 /* Products */;
@@ -207,8 +226,9 @@
 			files = (
 				B030F7CF1EAA0F2C002677F5 /* LaunchScreen.storyboard in Resources */,
 				B030F7CC1EAA0F2C002677F5 /* Assets.xcassets in Resources */,
+				B012B0751EBAF12500844E05 /* qx.bundle in Resources */,
 				B012B0521EB9A5B200844E05 /* SimpleViewController.xib in Resources */,
-				B012B04D1EB9A54100844E05 /* bookdemo.storyboard in Resources */,
+				B012B0691EBACD9000844E05 /* bookdemo.storyboard in Resources */,
 				B030F7C71EAA0F2C002677F5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,6 +245,7 @@
 				B012B0511EB9A5B200844E05 /* SimpleViewController.m in Sources */,
 				B030F7C41EAA0F2C002677F5 /* ViewController.m in Sources */,
 				B012B0581EB9B90300844E05 /* SegueViewController.m in Sources */,
+				B012B0781EBB21B400844E05 /* CustomView.m in Sources */,
 				B030F7C11EAA0F2C002677F5 /* AppDelegate.m in Sources */,
 				B030F7CA1EAA0F2C002677F5 /* QXIOS.xcdatamodeld in Sources */,
 				B030F7DC1EAA11C4002677F5 /* QXFileManage.m in Sources */,
@@ -237,10 +258,24 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		B012B06B1EBACD9000844E05 /* bookdemo.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B012B06A1EBACD9000844E05 /* Base */,
+				B012B06D1EBACD9600844E05 /* en */,
+				B012B06F1EBACD9700844E05 /* zh-Hans */,
+				B012B0711EBACD9800844E05 /* de */,
+			);
+			name = bookdemo.storyboard;
+			sourceTree = "<group>";
+		};
 		B030F7C51EAA0F2C002677F5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B030F7C61EAA0F2C002677F5 /* Base */,
+				B012B0591EBABFB500844E05 /* zh-Hans */,
+				B012B05B1EBAC0BD00844E05 /* de */,
+				B012B0601EBAC8FB00844E05 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -249,6 +284,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				B030F7CE1EAA0F2C002677F5 /* Base */,
+				B012B05A1EBABFB500844E05 /* zh-Hans */,
+				B012B05C1EBAC0BD00844E05 /* de */,
+				B012B05E1EBAC16400844E05 /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -260,6 +298,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -308,6 +347,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
