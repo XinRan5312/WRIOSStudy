@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface SimpleViewController2 : UIViewController
-
+@property(nonatomic,copy)NSString *name;
 @end

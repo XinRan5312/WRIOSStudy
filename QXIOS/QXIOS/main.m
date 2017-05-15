@@ -11,6 +11,7 @@
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
+        //程序的入口首先启动的是AppDelegate这个类
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }

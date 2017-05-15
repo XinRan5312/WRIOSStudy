@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30894D025D5A407D6BFE5E9F /* Pods_QXIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115E184374D1CAAE5F3DA810 /* Pods_QXIOS.framework */; };
 		B012B0511EB9A5B200844E05 /* SimpleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B012B04F1EB9A5B200844E05 /* SimpleViewController.m */; };
 		B012B0521EB9A5B200844E05 /* SimpleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B012B0501EB9A5B200844E05 /* SimpleViewController.xib */; };
 		B012B0551EB9ADB800844E05 /* SimpleViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = B012B0541EB9ADB800844E05 /* SimpleViewController2.m */; };
@@ -14,6 +15,11 @@
 		B012B0691EBACD9000844E05 /* bookdemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B012B06B1EBACD9000844E05 /* bookdemo.storyboard */; };
 		B012B0751EBAF12500844E05 /* qx.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B012B0741EBAF12500844E05 /* qx.bundle */; };
 		B012B0781EBB21B400844E05 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = B012B0771EBB21B400844E05 /* CustomView.m */; };
+		B012B07B1EBC2A7E00844E05 /* CustomViewOne.m in Sources */ = {isa = PBXBuildFile; fileRef = B012B07A1EBC2A7E00844E05 /* CustomViewOne.m */; };
+		B012B07E1EBC2AA900844E05 /* CustomViewTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = B012B07D1EBC2AA900844E05 /* CustomViewTwo.m */; };
+		B012B0821EC59C8B00844E05 /* QXMJRefreshStudyMainControllerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B012B0811EC59C8B00844E05 /* QXMJRefreshStudyMainControllerTableViewController.m */; };
+		B012B0841EC59CAC00844E05 /* MJRefresh.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B012B0831EC59CAC00844E05 /* MJRefresh.storyboard */; };
+		B012B0871EC5A03400844E05 /* QXDataModle.m in Sources */ = {isa = PBXBuildFile; fileRef = B012B0861EC5A03400844E05 /* QXDataModle.m */; };
 		B030F7BE1EAA0F2C002677F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B030F7BD1EAA0F2C002677F5 /* main.m */; };
 		B030F7C11EAA0F2C002677F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B030F7C01EAA0F2C002677F5 /* AppDelegate.m */; };
 		B030F7C41EAA0F2C002677F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B030F7C31EAA0F2C002677F5 /* ViewController.m */; };
@@ -30,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		115E184374D1CAAE5F3DA810 /* Pods_QXIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QXIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF0C0B7B8E61C3FC13AD100E /* Pods-QXIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QXIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-QXIOS/Pods-QXIOS.release.xcconfig"; sourceTree = "<group>"; };
 		B012B04E1EB9A5B200844E05 /* SimpleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleViewController.h; sourceTree = "<group>"; };
 		B012B04F1EB9A5B200844E05 /* SimpleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleViewController.m; sourceTree = "<group>"; };
 		B012B0501EB9A5B200844E05 /* SimpleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleViewController.xib; sourceTree = "<group>"; };
@@ -50,6 +58,15 @@
 		B012B0741EBAF12500844E05 /* qx.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = qx.bundle; sourceTree = "<group>"; };
 		B012B0761EBB21B400844E05 /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
 		B012B0771EBB21B400844E05 /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
+		B012B0791EBC2A7E00844E05 /* CustomViewOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewOne.h; sourceTree = "<group>"; };
+		B012B07A1EBC2A7E00844E05 /* CustomViewOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewOne.m; sourceTree = "<group>"; };
+		B012B07C1EBC2AA900844E05 /* CustomViewTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewTwo.h; sourceTree = "<group>"; };
+		B012B07D1EBC2AA900844E05 /* CustomViewTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewTwo.m; sourceTree = "<group>"; };
+		B012B0801EC59C8B00844E05 /* QXMJRefreshStudyMainControllerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXMJRefreshStudyMainControllerTableViewController.h; sourceTree = "<group>"; };
+		B012B0811EC59C8B00844E05 /* QXMJRefreshStudyMainControllerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXMJRefreshStudyMainControllerTableViewController.m; sourceTree = "<group>"; };
+		B012B0831EC59CAC00844E05 /* MJRefresh.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MJRefresh.storyboard; sourceTree = "<group>"; };
+		B012B0851EC5A03400844E05 /* QXDataModle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXDataModle.h; sourceTree = "<group>"; };
+		B012B0861EC5A03400844E05 /* QXDataModle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXDataModle.m; sourceTree = "<group>"; };
 		B030F7B91EAA0F2C002677F5 /* QXIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QXIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B030F7BD1EAA0F2C002677F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B030F7BF1EAA0F2C002677F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,6 +88,7 @@
 		B036AF971EB09F16000F177E /* UIColor+StringColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+StringColor.m"; sourceTree = "<group>"; };
 		B036AF9A1EB1D06E000F177E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B036AF9C1EB1D08F000F177E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E6F2309282E1B463303DC9BD /* Pods-QXIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QXIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QXIOS/Pods-QXIOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,12 +98,22 @@
 			files = (
 				B036AF9D1EB1D08F000F177E /* QuartzCore.framework in Frameworks */,
 				B036AF9B1EB1D06E000F177E /* CoreGraphics.framework in Frameworks */,
+				30894D025D5A407D6BFE5E9F /* Pods_QXIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		690A1EBC6CA496BED1F5C2DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E6F2309282E1B463303DC9BD /* Pods-QXIOS.debug.xcconfig */,
+				AF0C0B7B8E61C3FC13AD100E /* Pods-QXIOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B012B04B1EB99FFA00844E05 /* bookdemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,8 +127,24 @@
 				B012B0571EB9B90300844E05 /* SegueViewController.m */,
 				B012B0761EBB21B400844E05 /* CustomView.h */,
 				B012B0771EBB21B400844E05 /* CustomView.m */,
+				B012B0791EBC2A7E00844E05 /* CustomViewOne.h */,
+				B012B07A1EBC2A7E00844E05 /* CustomViewOne.m */,
+				B012B07C1EBC2AA900844E05 /* CustomViewTwo.h */,
+				B012B07D1EBC2AA900844E05 /* CustomViewTwo.m */,
 			);
 			path = bookdemo;
+			sourceTree = "<group>";
+		};
+		B012B07F1EC59C4A00844E05 /* MJRefreshStudy */ = {
+			isa = PBXGroup;
+			children = (
+				B012B0801EC59C8B00844E05 /* QXMJRefreshStudyMainControllerTableViewController.h */,
+				B012B0811EC59C8B00844E05 /* QXMJRefreshStudyMainControllerTableViewController.m */,
+				B012B0831EC59CAC00844E05 /* MJRefresh.storyboard */,
+				B012B0851EC5A03400844E05 /* QXDataModle.h */,
+				B012B0861EC5A03400844E05 /* QXDataModle.m */,
+			);
+			path = MJRefreshStudy;
 			sourceTree = "<group>";
 		};
 		B030F7B01EAA0F2C002677F5 = {
@@ -109,6 +153,7 @@
 				B030F7BB1EAA0F2C002677F5 /* QXIOS */,
 				B030F7BA1EAA0F2C002677F5 /* Products */,
 				B036AF991EB1D06E000F177E /* Frameworks */,
+				690A1EBC6CA496BED1F5C2DA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +168,7 @@
 		B030F7BB1EAA0F2C002677F5 /* QXIOS */ = {
 			isa = PBXGroup;
 			children = (
+				B012B07F1EC59C4A00844E05 /* MJRefreshStudy */,
 				B012B04B1EB99FFA00844E05 /* bookdemo */,
 				B030F7BF1EAA0F2C002677F5 /* AppDelegate.h */,
 				B030F7C01EAA0F2C002677F5 /* AppDelegate.m */,
@@ -160,6 +206,7 @@
 			children = (
 				B036AF9C1EB1D08F000F177E /* QuartzCore.framework */,
 				B036AF9A1EB1D06E000F177E /* CoreGraphics.framework */,
+				115E184374D1CAAE5F3DA810 /* Pods_QXIOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -171,9 +218,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B030F7D31EAA0F2C002677F5 /* Build configuration list for PBXNativeTarget "QXIOS" */;
 			buildPhases = (
+				C1A217ACF7EAE61191C98ECA /* [CP] Check Pods Manifest.lock */,
 				B030F7B51EAA0F2C002677F5 /* Sources */,
 				B030F7B61EAA0F2C002677F5 /* Frameworks */,
 				B030F7B71EAA0F2C002677F5 /* Resources */,
+				140E35259C2A68CB6983DB53 /* [CP] Embed Pods Frameworks */,
+				B0B828D15430427CECAAAAED /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -224,6 +274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B012B0841EC59CAC00844E05 /* MJRefresh.storyboard in Resources */,
 				B030F7CF1EAA0F2C002677F5 /* LaunchScreen.storyboard in Resources */,
 				B030F7CC1EAA0F2C002677F5 /* Assets.xcassets in Resources */,
 				B012B0751EBAF12500844E05 /* qx.bundle in Resources */,
@@ -235,13 +286,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		140E35259C2A68CB6983DB53 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QXIOS/Pods-QXIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0B828D15430427CECAAAAED /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QXIOS/Pods-QXIOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1A217ACF7EAE61191C98ECA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B030F7B51EAA0F2C002677F5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B012B07E1EBC2AA900844E05 /* CustomViewTwo.m in Sources */,
+				B012B0821EC59C8B00844E05 /* QXMJRefreshStudyMainControllerTableViewController.m in Sources */,
 				B036AF951EB07D6A000F177E /* QXWaveView.m in Sources */,
 				B012B0551EB9ADB800844E05 /* SimpleViewController2.m in Sources */,
+				B012B07B1EBC2A7E00844E05 /* CustomViewOne.m in Sources */,
 				B012B0511EB9A5B200844E05 /* SimpleViewController.m in Sources */,
 				B030F7C41EAA0F2C002677F5 /* ViewController.m in Sources */,
 				B012B0581EB9B90300844E05 /* SegueViewController.m in Sources */,
@@ -249,6 +351,7 @@
 				B030F7C11EAA0F2C002677F5 /* AppDelegate.m in Sources */,
 				B030F7CA1EAA0F2C002677F5 /* QXIOS.xcdatamodeld in Sources */,
 				B030F7DC1EAA11C4002677F5 /* QXFileManage.m in Sources */,
+				B012B0871EC5A03400844E05 /* QXDataModle.m in Sources */,
 				B036AF921EB07CE5000F177E /* QXWaveControllerViewController.m in Sources */,
 				B036AF981EB09F16000F177E /* UIColor+StringColor.m in Sources */,
 				B030F7BE1EAA0F2C002677F5 /* main.m in Sources */,
@@ -388,6 +491,7 @@
 		};
 		B030F7D41EAA0F2C002677F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6F2309282E1B463303DC9BD /* Pods-QXIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = QXIOS/Info.plist;
@@ -399,6 +503,7 @@
 		};
 		B030F7D51EAA0F2C002677F5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF0C0B7B8E61C3FC13AD100E /* Pods-QXIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = QXIOS/Info.plist;

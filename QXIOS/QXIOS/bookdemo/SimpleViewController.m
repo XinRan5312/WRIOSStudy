@@ -8,6 +8,8 @@
 
 #import "SimpleViewController.h"
 #import "CustomView.h"
+#import "CustomViewOne.h"
+#import "CustomViewTwo.h"
 //#define CUSTOM_BUNDLE_PATH  [[NSBundle mainBundle] pathForResource:@"qx" ofType:@"bundle"];
 
 @interface SimpleViewController ()
@@ -36,12 +38,39 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    CustomView *custom=[[CustomView alloc]initWithFrame:CGRectMake(10, 60, 200, 200)];
-    custom.userInteractionEnabled=true;
-    custom.layer.backgroundColor=[UIColor redColor].CGColor;
-    [self.view addSubview:custom];
+    //忽略所有用户交互行为
+    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+    
+    //这样就不响应所有的用户交互事件  忽略所有用户的点击，拖动等行为  安心的做其它的事儿，比如我们动画的时候，不希望响应用户交互事件
+    //现在我做完了我想做的事儿，需要响应用户交互行为了，结束忽略
+    
+    [[UIApplication sharedApplication] endIgnoringInteractionEvents];
+    
+//    [self testEvents];
+    
  
     
+}
+//练习IOS事件传递机制
+-(void)testEvents{
+    CustomView *custom=[[CustomView alloc]initWithFrame:CGRectMake(10, 60, 400, 600)];
+    custom.userInteractionEnabled=true;
+    custom.layer.backgroundColor=[UIColor redColor].CGColor;
+    
+    CustomViewOne *one=[[CustomViewOne alloc] initWithFrame:CGRectMake(20, 80, 100, 150)];
+    one.userInteractionEnabled=true;
+    one.backgroundColor=[UIColor blueColor];
+    [custom addSubview:one];
+    
+    CustomViewTwo *two=[[CustomViewTwo alloc] initWithFrame:CGRectMake(20, 240, 100, 150)];
+    two.userInteractionEnabled=true;
+    two.backgroundColor=[UIColor yellowColor];
+    [custom addSubview:two];
+    
+    [self.view addSubview:custom];
+}
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+     NSLog(@"Controller&touchesBegan");
 }
 //获取自定义qx.bundle下的img资源
 

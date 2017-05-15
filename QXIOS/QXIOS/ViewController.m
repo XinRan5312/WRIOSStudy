@@ -24,6 +24,21 @@
     NSLog(@"进入跳转了");
 }
 
+- (IBAction)gotoOtherViewController:(id)sender {
+    
+
+    
+        UIStoryboard *storyBoard=[UIStoryboard storyboardWithName:@"MJRefresh" bundle:nil];
+        
+        UIViewController *viewController=[storyBoard instantiateViewControllerWithIdentifier:@"refreshStudyMainController"];
+        
+        [self presentViewController:viewController animated:YES completion:^{
+            NSLog(@"启动了QXRefreshStudyMainController");
+        }];
+    
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -34,7 +49,7 @@
     //[self testCABaseAnimation2];
     //[self bezierXuan];
     //[self testPathAnimation];
-    [self testMaskLayer];
+//    [self testMaskLayer];
     
 }
 //练习maskLayer  蒙版
