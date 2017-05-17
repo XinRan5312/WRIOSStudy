@@ -9,8 +9,10 @@
 #import "QXMJRefreshStudyMainControllerTableViewController.h"
 #import "QXDataModle.h"
 #import "MJRefresh.h"
+#import "QXShowTableViewController.h"
 
 static NSString *const DATAMODLEONE=@"UITableView下拉刷新";
+static NSString *const DATAMODLETWO=@"UITableView上拉加载更多";
 
 @interface QXMJRefreshStudyMainControllerTableViewController ()
 
@@ -49,6 +51,19 @@ static NSString *const DATAMODLEONE=@"UITableView下拉刷新";
         });
     }];
     
+    tableView.mj_footer=[MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0*NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            
+            //模拟网络2秒时间
+            
+            [tableView.mj_footer endRefreshing];
+        
+        });
+    }];
+    [self.tableView.mj_header beginRefreshing];//开启刷新刷新动作 才回去请求刷新啊
+    [self.tableView.mj_footer beginRefreshing];//开启刷新动作
+    
 
 
 }
@@ -58,11 +73,20 @@ static NSString *const DATAMODLEONE=@"UITableView下拉刷新";
     QXDataModle *downdataTableView=[[QXDataModle alloc] init];
     
     downdataTableView.header=DATAMODLEONE;
+        downdataTableView.vcClass=QXShowTableViewController.class;
     
     downdataTableView.titles=@[@"默认下拉刷新",@"有图片下拉刷新",@"去掉时间下拉刷新",@"去掉状态和时间的下拉刷新",@"自定义控件的下拉刷新"];
     downdataTableView.methods=@[@"downTableNormal",@"downTableGif",@"downTableHideTime",@"downTableHideStatus",@"downTableCustom"];
+        
+        QXDataModle *upData=[[QXDataModle alloc]init];
+        
+        upData.header=DATAMODLETWO;
+        upData.vcClass=QXShowTableViewController.class;
+        
+        upData.titles=@[@"默认", @"动画图片", @"隐藏刷新状态的文字", @"全部加载完毕没有数据了", @"禁止自动加载", @"自定义文字", @"加载后隐藏", @"自动回弹的上拉01", @"自动回弹的上拉02", @"自定义刷新控件(自动刷新)", @"自定义刷新控件(自动回弹)"];
+        upData.methods=@[@"upTableNormal",@"upTableGif",@"upTableHideText",@"upTableComplete",@"upTableNoAuto",@"upTableCustomText",@"upTableCompleteHidde",@"upTableAutoBack1",@"upTableAutoBack2",@"upTableCustomAutoRefresh",@"upTableCustomAutoBack"];
     
-        self.dataModle=@[downdataTableView];
+        self.dataModle=@[downdataTableView,upData];
     }
     
     return _dataModle;
@@ -107,6 +131,27 @@ static NSString *const DATAMODLEONE=@"UITableView下拉刷新";
 -(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
 
     return _dataModle[section].header;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    QXDataModle *modle=_dataModle[indexPath.section];
+    
+    UIViewController *controller=[[modle.vcClass alloc] init];
+    
+    NSString *title=modle.titles[indexPath.row];
+    
+    NSString *method=modle.methods[indexPath.row];
+    
+    controller.title=title;
+    [controller setValue:method forKey:@"method"];
+    
+    [self presentViewController:controller animated:YES
+                     completion:^{
+                         NSLog(@"go to true ok");
+                     
+                     }];
+
 }
 
 

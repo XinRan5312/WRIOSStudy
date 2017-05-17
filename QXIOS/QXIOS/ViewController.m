@@ -50,7 +50,32 @@
     //[self bezierXuan];
     //[self testPathAnimation];
 //    [self testMaskLayer];
+    UISegmentedControl *segmentedControl=[[UISegmentedControl alloc]initWithItems:@[@"Add",@"Delete",@"Editer",@"insert"]];
     
+    segmentedControl.frame=CGRectMake(0, 70, 400, 40);
+    segmentedControl.tintColor=[UIColor yellowColor];
+    segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    segmentedControl.selectedSegmentIndex = 0;
+    [segmentedControl removeSegmentAtIndex:2 animated:YES];
+//    [segmentedControl insertSegmentWithImage:[UIImage imageNamed:@"dropdown_loading_01"] atIndex:0 animated:YES];
+    [segmentedControl insertSegmentWithTitle:@"Hello" atIndex:0 animated:YES];
+    segmentedControl.segmentedControlStyle=UISegmentedControlStylePlain;
+    [segmentedControl addTarget:self action:@selector(segmentEnvent:) forControlEvents:UIControlEventValueChanged];
+    
+    
+    [self.view addSubview:segmentedControl];
+    
+}
+-(void)segmentEnvent:(id)sender{
+    if([sender isKindOfClass:[UISegmentedControl class]]){
+     
+        UISegmentedControl *controller=(UISegmentedControl*)sender;
+        
+        NSLog(@"点击了第%zd个",[controller selectedSegmentIndex]);
+        
+    
+    }
+
 }
 //练习maskLayer  蒙版
 /**

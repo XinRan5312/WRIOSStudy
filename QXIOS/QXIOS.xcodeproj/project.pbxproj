@@ -33,6 +33,15 @@
 		B036AF981EB09F16000F177E /* UIColor+StringColor.m in Sources */ = {isa = PBXBuildFile; fileRef = B036AF971EB09F16000F177E /* UIColor+StringColor.m */; };
 		B036AF9B1EB1D06E000F177E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B036AF9A1EB1D06E000F177E /* CoreGraphics.framework */; };
 		B036AF9D1EB1D08F000F177E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B036AF9C1EB1D08F000F177E /* QuartzCore.framework */; };
+		B05848EE1EC98C64004F8380 /* QXShowTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B05848ED1EC98C64004F8380 /* QXShowTableViewController.m */; };
+		B05848F21EC98E41004F8380 /* UIViewController+OptionsMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = B05848F11EC98E41004F8380 /* UIViewController+OptionsMethod.m */; };
+		B05848F91ECAA42F004F8380 /* QXRefreshStateHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = B05848F81ECAA42F004F8380 /* QXRefreshStateHeader.m */; };
+		B05848FC1ECAA5F6004F8380 /* QXRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = B05848FB1ECAA5F6004F8380 /* QXRefreshGifHeader.m */; };
+		B05848FF1ECAACEA004F8380 /* QXWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = B05848FE1ECAACEA004F8380 /* QXWindow.m */; };
+		B05849021ECAADFE004F8380 /* QXTempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B05849011ECAADFE004F8380 /* QXTempViewController.m */; };
+		B05849051ECAD6D1004F8380 /* QXCustomRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = B05849041ECAD6D1004F8380 /* QXCustomRefreshHeader.m */; };
+		B05849081ECADF55004F8380 /* QXRefreshAutoGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = B05849071ECADF55004F8380 /* QXRefreshAutoGifFooter.m */; };
+		B058490B1ECAE00D004F8380 /* QXRefreshBackGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = B058490A1ECAE00D004F8380 /* QXRefreshBackGifFooter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +97,24 @@
 		B036AF971EB09F16000F177E /* UIColor+StringColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+StringColor.m"; sourceTree = "<group>"; };
 		B036AF9A1EB1D06E000F177E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B036AF9C1EB1D08F000F177E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B05848EC1EC98C64004F8380 /* QXShowTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXShowTableViewController.h; sourceTree = "<group>"; };
+		B05848ED1EC98C64004F8380 /* QXShowTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXShowTableViewController.m; sourceTree = "<group>"; };
+		B05848F01EC98E41004F8380 /* UIViewController+OptionsMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+OptionsMethod.h"; sourceTree = "<group>"; };
+		B05848F11EC98E41004F8380 /* UIViewController+OptionsMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+OptionsMethod.m"; sourceTree = "<group>"; };
+		B05848F71ECAA42F004F8380 /* QXRefreshStateHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXRefreshStateHeader.h; sourceTree = "<group>"; };
+		B05848F81ECAA42F004F8380 /* QXRefreshStateHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXRefreshStateHeader.m; sourceTree = "<group>"; };
+		B05848FA1ECAA5F6004F8380 /* QXRefreshGifHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXRefreshGifHeader.h; sourceTree = "<group>"; };
+		B05848FB1ECAA5F6004F8380 /* QXRefreshGifHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXRefreshGifHeader.m; sourceTree = "<group>"; };
+		B05848FD1ECAACEA004F8380 /* QXWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXWindow.h; sourceTree = "<group>"; };
+		B05848FE1ECAACEA004F8380 /* QXWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXWindow.m; sourceTree = "<group>"; };
+		B05849001ECAADFE004F8380 /* QXTempViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXTempViewController.h; sourceTree = "<group>"; };
+		B05849011ECAADFE004F8380 /* QXTempViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXTempViewController.m; sourceTree = "<group>"; };
+		B05849031ECAD6D1004F8380 /* QXCustomRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXCustomRefreshHeader.h; sourceTree = "<group>"; };
+		B05849041ECAD6D1004F8380 /* QXCustomRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXCustomRefreshHeader.m; sourceTree = "<group>"; };
+		B05849061ECADF55004F8380 /* QXRefreshAutoGifFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXRefreshAutoGifFooter.h; sourceTree = "<group>"; };
+		B05849071ECADF55004F8380 /* QXRefreshAutoGifFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXRefreshAutoGifFooter.m; sourceTree = "<group>"; };
+		B05849091ECAE00D004F8380 /* QXRefreshBackGifFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXRefreshBackGifFooter.h; sourceTree = "<group>"; };
+		B058490A1ECAE00D004F8380 /* QXRefreshBackGifFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXRefreshBackGifFooter.m; sourceTree = "<group>"; };
 		E6F2309282E1B463303DC9BD /* Pods-QXIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QXIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QXIOS/Pods-QXIOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,11 +165,15 @@
 		B012B07F1EC59C4A00844E05 /* MJRefreshStudy */ = {
 			isa = PBXGroup;
 			children = (
+				B05848F31EC9AEC0004F8380 /* Custom */,
+				B05848EF1EC98DFA004F8380 /* Category */,
 				B012B0801EC59C8B00844E05 /* QXMJRefreshStudyMainControllerTableViewController.h */,
 				B012B0811EC59C8B00844E05 /* QXMJRefreshStudyMainControllerTableViewController.m */,
 				B012B0831EC59CAC00844E05 /* MJRefresh.storyboard */,
 				B012B0851EC5A03400844E05 /* QXDataModle.h */,
 				B012B0861EC5A03400844E05 /* QXDataModle.m */,
+				B05848EC1EC98C64004F8380 /* QXShowTableViewController.h */,
+				B05848ED1EC98C64004F8380 /* QXShowTableViewController.m */,
 			);
 			path = MJRefreshStudy;
 			sourceTree = "<group>";
@@ -209,6 +240,36 @@
 				115E184374D1CAAE5F3DA810 /* Pods_QXIOS.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B05848EF1EC98DFA004F8380 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				B05848F01EC98E41004F8380 /* UIViewController+OptionsMethod.h */,
+				B05848F11EC98E41004F8380 /* UIViewController+OptionsMethod.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		B05848F31EC9AEC0004F8380 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				B05848F71ECAA42F004F8380 /* QXRefreshStateHeader.h */,
+				B05848F81ECAA42F004F8380 /* QXRefreshStateHeader.m */,
+				B05848FA1ECAA5F6004F8380 /* QXRefreshGifHeader.h */,
+				B05848FB1ECAA5F6004F8380 /* QXRefreshGifHeader.m */,
+				B05848FD1ECAACEA004F8380 /* QXWindow.h */,
+				B05848FE1ECAACEA004F8380 /* QXWindow.m */,
+				B05849001ECAADFE004F8380 /* QXTempViewController.h */,
+				B05849011ECAADFE004F8380 /* QXTempViewController.m */,
+				B05849031ECAD6D1004F8380 /* QXCustomRefreshHeader.h */,
+				B05849041ECAD6D1004F8380 /* QXCustomRefreshHeader.m */,
+				B05849061ECADF55004F8380 /* QXRefreshAutoGifFooter.h */,
+				B05849071ECADF55004F8380 /* QXRefreshAutoGifFooter.m */,
+				B05849091ECAE00D004F8380 /* QXRefreshBackGifFooter.h */,
+				B058490A1ECAE00D004F8380 /* QXRefreshBackGifFooter.m */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,20 +402,29 @@
 			files = (
 				B012B07E1EBC2AA900844E05 /* CustomViewTwo.m in Sources */,
 				B012B0821EC59C8B00844E05 /* QXMJRefreshStudyMainControllerTableViewController.m in Sources */,
+				B058490B1ECAE00D004F8380 /* QXRefreshBackGifFooter.m in Sources */,
 				B036AF951EB07D6A000F177E /* QXWaveView.m in Sources */,
 				B012B0551EB9ADB800844E05 /* SimpleViewController2.m in Sources */,
 				B012B07B1EBC2A7E00844E05 /* CustomViewOne.m in Sources */,
 				B012B0511EB9A5B200844E05 /* SimpleViewController.m in Sources */,
+				B05848F21EC98E41004F8380 /* UIViewController+OptionsMethod.m in Sources */,
 				B030F7C41EAA0F2C002677F5 /* ViewController.m in Sources */,
 				B012B0581EB9B90300844E05 /* SegueViewController.m in Sources */,
+				B05849081ECADF55004F8380 /* QXRefreshAutoGifFooter.m in Sources */,
 				B012B0781EBB21B400844E05 /* CustomView.m in Sources */,
 				B030F7C11EAA0F2C002677F5 /* AppDelegate.m in Sources */,
+				B05848F91ECAA42F004F8380 /* QXRefreshStateHeader.m in Sources */,
+				B05848FF1ECAACEA004F8380 /* QXWindow.m in Sources */,
 				B030F7CA1EAA0F2C002677F5 /* QXIOS.xcdatamodeld in Sources */,
+				B05848FC1ECAA5F6004F8380 /* QXRefreshGifHeader.m in Sources */,
 				B030F7DC1EAA11C4002677F5 /* QXFileManage.m in Sources */,
 				B012B0871EC5A03400844E05 /* QXDataModle.m in Sources */,
+				B05849051ECAD6D1004F8380 /* QXCustomRefreshHeader.m in Sources */,
 				B036AF921EB07CE5000F177E /* QXWaveControllerViewController.m in Sources */,
 				B036AF981EB09F16000F177E /* UIColor+StringColor.m in Sources */,
 				B030F7BE1EAA0F2C002677F5 /* main.m in Sources */,
+				B05848EE1EC98C64004F8380 /* QXShowTableViewController.m in Sources */,
+				B05849021ECAADFE004F8380 /* QXTempViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
