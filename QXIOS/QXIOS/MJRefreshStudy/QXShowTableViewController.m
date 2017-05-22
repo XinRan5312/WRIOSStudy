@@ -14,6 +14,8 @@
 #import "QXCustomRefreshHeader.h"
 #import "QXRefreshAutoGifFooter.h"
 #import "QXRefreshBackGifFooter.h"
+#import "QXCustomAutoFooter.h"
+#import "QXCustomBackStateFooter.h"
 /**
  * 随机数据
  */
@@ -281,6 +283,44 @@ static NSString* ID=@"cell";
     
     [footer beginRefreshing];
     self.tableView.mj_footer=footer;
+
+}
+
+-(void)upTableAutoBack1{
+    // 设置回调（一旦进入刷新状态，就调用target的action，也就是调用self的loadMoreData方法）
+    self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    // 设置了底部inset
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 30, 0);
+//    // 忽略掉底部inset
+//    self.tableView.mj_footer.ignoredScrollViewContentInsetBottom = 30;
+    
+    [self.tableView.mj_footer beginRefreshing];
+
+
+}
+//只加载一次
+-(void)upTableAutoBack2{
+    self.tableView.mj_footer=[QXRefreshBackGifFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadOnlyOnceData)];
+    self.tableView.mj_footer.automaticallyChangeAlpha=YES;
+    
+    [self.tableView.mj_footer beginRefreshing];
+
+}
+
+-(void)upTableCustomAutoRefresh{
+
+    self.tableView.mj_footer=[QXCustomAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    self.tableView.mj_footer.automaticallyChangeAlpha=YES;
+    
+    [self.tableView.mj_footer beginRefreshing];
+}
+
+-(void)upTableCustomAutoBack{
+    self.tableView.mj_footer=[QXCustomBackStateFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    self.tableView.mj_footer.automaticallyChangeAlpha=YES;
+    
+    [self.tableView.mj_footer beginRefreshing];
+
 
 }
 -(NSMutableArray*)data{

@@ -10,9 +10,11 @@
 #import "QXDataModle.h"
 #import "MJRefresh.h"
 #import "QXShowTableViewController.h"
+#import "QXRefreshCollectionViewController.h"
 
 static NSString *const DATAMODLEONE=@"UITableView下拉刷新";
 static NSString *const DATAMODLETWO=@"UITableView上拉加载更多";
+static NSString *const COLLECTIONVIEW=@"UICollectionView下拉刷新";
 
 @interface QXMJRefreshStudyMainControllerTableViewController ()
 
@@ -78,15 +80,26 @@ static NSString *const DATAMODLETWO=@"UITableView上拉加载更多";
     downdataTableView.titles=@[@"默认下拉刷新",@"有图片下拉刷新",@"去掉时间下拉刷新",@"去掉状态和时间的下拉刷新",@"自定义控件的下拉刷新"];
     downdataTableView.methods=@[@"downTableNormal",@"downTableGif",@"downTableHideTime",@"downTableHideStatus",@"downTableCustom"];
         
-        QXDataModle *upData=[[QXDataModle alloc]init];
+        //太多一屏展不开
         
-        upData.header=DATAMODLETWO;
-        upData.vcClass=QXShowTableViewController.class;
+//        QXDataModle *upData=[[QXDataModle alloc]init];
+//        
+//        upData.header=DATAMODLETWO;
+//        upData.vcClass=QXShowTableViewController.class;
+//        
+//        upData.titles=@[@"默认", @"动画图片", @"隐藏刷新状态的文字", @"全部加载完毕没有数据了", @"禁止自动加载", @"自定义文字", @"加载后隐藏", @"自动回弹的上拉01", @"自动回弹的上拉02", @"自定义刷新控件(自动刷新)", @"自定义刷新控件(自动回弹)"];
+//        upData.methods=@[@"upTableNormal",@"upTableGif",@"upTableHideText",@"upTableComplete",@"upTableNoAuto",@"upTableCustomText",@"upTableCompleteHidde",@"upTableAutoBack1",@"upTableAutoBack2",@"upTableCustomAutoRefresh",@"upTableCustomAutoBack"];
         
-        upData.titles=@[@"默认", @"动画图片", @"隐藏刷新状态的文字", @"全部加载完毕没有数据了", @"禁止自动加载", @"自定义文字", @"加载后隐藏", @"自动回弹的上拉01", @"自动回弹的上拉02", @"自定义刷新控件(自动刷新)", @"自定义刷新控件(自动回弹)"];
-        upData.methods=@[@"upTableNormal",@"upTableGif",@"upTableHideText",@"upTableComplete",@"upTableNoAuto",@"upTableCustomText",@"upTableCompleteHidde",@"upTableAutoBack1",@"upTableAutoBack2",@"upTableCustomAutoRefresh",@"upTableCustomAutoBack"];
+        QXDataModle *collectionView=[[QXDataModle alloc] init];
+        
+        collectionView.header=COLLECTIONVIEW;
+        collectionView.vcClass=QXRefreshCollectionViewController.class;
+        
+        collectionView.titles=@[@"默认下拉刷新"];
+        collectionView.methods=@[@"downCollectionNormal"];
+        
     
-        self.dataModle=@[downdataTableView,upData];
+        self.dataModle=@[downdataTableView,collectionView];
     }
     
     return _dataModle;

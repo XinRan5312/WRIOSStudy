@@ -42,6 +42,13 @@
 		B05849051ECAD6D1004F8380 /* QXCustomRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = B05849041ECAD6D1004F8380 /* QXCustomRefreshHeader.m */; };
 		B05849081ECADF55004F8380 /* QXRefreshAutoGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = B05849071ECADF55004F8380 /* QXRefreshAutoGifFooter.m */; };
 		B058490B1ECAE00D004F8380 /* QXRefreshBackGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = B058490A1ECAE00D004F8380 /* QXRefreshBackGifFooter.m */; };
+		B06322741ECC19F700660E53 /* QXCustomAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = B06322731ECC19F700660E53 /* QXCustomAutoFooter.m */; };
+		B06322771ECC1B1D00660E53 /* QXCustomBackStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = B06322761ECC1B1D00660E53 /* QXCustomBackStateFooter.m */; };
+		B063227D1ECE9F1B00660E53 /* QXCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B063227C1ECE9F1B00660E53 /* QXCollectionViewController.m */; };
+		B063227F1ECEB51400660E53 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B063227E1ECEB51400660E53 /* CollectionViewCell.xib */; };
+		B06322811ECEB68B00660E53 /* CollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B06322801ECEB68B00660E53 /* CollectionReusableView.xib */; };
+		B06322841ECEB9BF00660E53 /* QXCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B06322831ECEB9BF00660E53 /* QXCollectionViewCell.m */; };
+		B06322871ECEC37900660E53 /* QXRefreshCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B06322861ECEC37900660E53 /* QXRefreshCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +122,18 @@
 		B05849071ECADF55004F8380 /* QXRefreshAutoGifFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXRefreshAutoGifFooter.m; sourceTree = "<group>"; };
 		B05849091ECAE00D004F8380 /* QXRefreshBackGifFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXRefreshBackGifFooter.h; sourceTree = "<group>"; };
 		B058490A1ECAE00D004F8380 /* QXRefreshBackGifFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXRefreshBackGifFooter.m; sourceTree = "<group>"; };
+		B06322721ECC19F700660E53 /* QXCustomAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXCustomAutoFooter.h; sourceTree = "<group>"; };
+		B06322731ECC19F700660E53 /* QXCustomAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXCustomAutoFooter.m; sourceTree = "<group>"; };
+		B06322751ECC1B1D00660E53 /* QXCustomBackStateFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXCustomBackStateFooter.h; sourceTree = "<group>"; };
+		B06322761ECC1B1D00660E53 /* QXCustomBackStateFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXCustomBackStateFooter.m; sourceTree = "<group>"; };
+		B063227B1ECE9F1B00660E53 /* QXCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXCollectionViewController.h; sourceTree = "<group>"; };
+		B063227C1ECE9F1B00660E53 /* QXCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXCollectionViewController.m; sourceTree = "<group>"; };
+		B063227E1ECEB51400660E53 /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		B06322801ECEB68B00660E53 /* CollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionReusableView.xib; sourceTree = "<group>"; };
+		B06322821ECEB9BF00660E53 /* QXCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXCollectionViewCell.h; sourceTree = "<group>"; };
+		B06322831ECEB9BF00660E53 /* QXCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXCollectionViewCell.m; sourceTree = "<group>"; };
+		B06322851ECEC37900660E53 /* QXRefreshCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXRefreshCollectionViewController.h; sourceTree = "<group>"; };
+		B06322861ECEC37900660E53 /* QXRefreshCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXRefreshCollectionViewController.m; sourceTree = "<group>"; };
 		E6F2309282E1B463303DC9BD /* Pods-QXIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QXIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QXIOS/Pods-QXIOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,6 +193,14 @@
 				B012B0861EC5A03400844E05 /* QXDataModle.m */,
 				B05848EC1EC98C64004F8380 /* QXShowTableViewController.h */,
 				B05848ED1EC98C64004F8380 /* QXShowTableViewController.m */,
+				B063227B1ECE9F1B00660E53 /* QXCollectionViewController.h */,
+				B063227C1ECE9F1B00660E53 /* QXCollectionViewController.m */,
+				B063227E1ECEB51400660E53 /* CollectionViewCell.xib */,
+				B06322801ECEB68B00660E53 /* CollectionReusableView.xib */,
+				B06322821ECEB9BF00660E53 /* QXCollectionViewCell.h */,
+				B06322831ECEB9BF00660E53 /* QXCollectionViewCell.m */,
+				B06322851ECEC37900660E53 /* QXRefreshCollectionViewController.h */,
+				B06322861ECEC37900660E53 /* QXRefreshCollectionViewController.m */,
 			);
 			path = MJRefreshStudy;
 			sourceTree = "<group>";
@@ -268,6 +295,10 @@
 				B05849071ECADF55004F8380 /* QXRefreshAutoGifFooter.m */,
 				B05849091ECAE00D004F8380 /* QXRefreshBackGifFooter.h */,
 				B058490A1ECAE00D004F8380 /* QXRefreshBackGifFooter.m */,
+				B06322721ECC19F700660E53 /* QXCustomAutoFooter.h */,
+				B06322731ECC19F700660E53 /* QXCustomAutoFooter.m */,
+				B06322751ECC1B1D00660E53 /* QXCustomBackStateFooter.h */,
+				B06322761ECC1B1D00660E53 /* QXCustomBackStateFooter.m */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -339,8 +370,10 @@
 				B030F7CF1EAA0F2C002677F5 /* LaunchScreen.storyboard in Resources */,
 				B030F7CC1EAA0F2C002677F5 /* Assets.xcassets in Resources */,
 				B012B0751EBAF12500844E05 /* qx.bundle in Resources */,
+				B06322811ECEB68B00660E53 /* CollectionReusableView.xib in Resources */,
 				B012B0521EB9A5B200844E05 /* SimpleViewController.xib in Resources */,
 				B012B0691EBACD9000844E05 /* bookdemo.storyboard in Resources */,
+				B063227F1ECEB51400660E53 /* CollectionViewCell.xib in Resources */,
 				B030F7C71EAA0F2C002677F5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,11 +438,14 @@
 				B058490B1ECAE00D004F8380 /* QXRefreshBackGifFooter.m in Sources */,
 				B036AF951EB07D6A000F177E /* QXWaveView.m in Sources */,
 				B012B0551EB9ADB800844E05 /* SimpleViewController2.m in Sources */,
+				B06322741ECC19F700660E53 /* QXCustomAutoFooter.m in Sources */,
 				B012B07B1EBC2A7E00844E05 /* CustomViewOne.m in Sources */,
 				B012B0511EB9A5B200844E05 /* SimpleViewController.m in Sources */,
 				B05848F21EC98E41004F8380 /* UIViewController+OptionsMethod.m in Sources */,
 				B030F7C41EAA0F2C002677F5 /* ViewController.m in Sources */,
 				B012B0581EB9B90300844E05 /* SegueViewController.m in Sources */,
+				B063227D1ECE9F1B00660E53 /* QXCollectionViewController.m in Sources */,
+				B06322841ECEB9BF00660E53 /* QXCollectionViewCell.m in Sources */,
 				B05849081ECADF55004F8380 /* QXRefreshAutoGifFooter.m in Sources */,
 				B012B0781EBB21B400844E05 /* CustomView.m in Sources */,
 				B030F7C11EAA0F2C002677F5 /* AppDelegate.m in Sources */,
@@ -418,10 +454,12 @@
 				B030F7CA1EAA0F2C002677F5 /* QXIOS.xcdatamodeld in Sources */,
 				B05848FC1ECAA5F6004F8380 /* QXRefreshGifHeader.m in Sources */,
 				B030F7DC1EAA11C4002677F5 /* QXFileManage.m in Sources */,
+				B06322871ECEC37900660E53 /* QXRefreshCollectionViewController.m in Sources */,
 				B012B0871EC5A03400844E05 /* QXDataModle.m in Sources */,
 				B05849051ECAD6D1004F8380 /* QXCustomRefreshHeader.m in Sources */,
 				B036AF921EB07CE5000F177E /* QXWaveControllerViewController.m in Sources */,
 				B036AF981EB09F16000F177E /* UIColor+StringColor.m in Sources */,
+				B06322771ECC1B1D00660E53 /* QXCustomBackStateFooter.m in Sources */,
 				B030F7BE1EAA0F2C002677F5 /* main.m in Sources */,
 				B05848EE1EC98C64004F8380 /* QXShowTableViewController.m in Sources */,
 				B05849021ECAADFE004F8380 /* QXTempViewController.m in Sources */,

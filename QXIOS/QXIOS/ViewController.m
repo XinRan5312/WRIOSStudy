@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "QXWaveControllerViewController.h"
 #import "UIColor+StringColor.h"
+#import "QXCollectionViewController.h"
+#import "QXRefreshCollectionViewController.h"
 
 @interface ViewController (){
     CATextLayer *textLayer;
@@ -31,7 +33,11 @@
         UIStoryboard *storyBoard=[UIStoryboard storyboardWithName:@"MJRefresh" bundle:nil];
         
         UIViewController *viewController=[storyBoard instantiateViewControllerWithIdentifier:@"refreshStudyMainController"];
-        
+    
+         UIViewController *vc=[[QXCollectionViewController alloc] init];
+    
+        UIViewController *refreshVc=[[QXRefreshCollectionViewController alloc] init];
+    
         [self presentViewController:viewController animated:YES completion:^{
             NSLog(@"启动了QXRefreshStudyMainController");
         }];
