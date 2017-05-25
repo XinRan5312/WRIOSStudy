@@ -49,6 +49,12 @@
 		B06322811ECEB68B00660E53 /* CollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B06322801ECEB68B00660E53 /* CollectionReusableView.xib */; };
 		B06322841ECEB9BF00660E53 /* QXCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B06322831ECEB9BF00660E53 /* QXCollectionViewCell.m */; };
 		B06322871ECEC37900660E53 /* QXRefreshCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B06322861ECEC37900660E53 /* QXRefreshCollectionViewController.m */; };
+		B063228A1ED2B1FC00660E53 /* QXWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B06322891ED2B1FC00660E53 /* QXWebViewController.m */; };
+		B063228C1ED2C8AB00660E53 /* Groovy.pdf in Resources */ = {isa = PBXBuildFile; fileRef = B063228B1ED2C8AB00660E53 /* Groovy.pdf */; };
+		B063228E1ED2CAA700660E53 /* out.txt in Resources */ = {isa = PBXBuildFile; fileRef = B063228D1ED2CAA700660E53 /* out.txt */; };
+		B06322911ED43B4500660E53 /* QXWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B06322901ED43B4500660E53 /* QXWKWebViewController.m */; };
+		B06322931ED532EE00660E53 /* local.html in Resources */ = {isa = PBXBuildFile; fileRef = B06322921ED532EE00660E53 /* local.html */; };
+		B06322951ED5903F00660E53 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B06322941ED5903F00660E53 /* JavaScriptCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -134,6 +140,14 @@
 		B06322831ECEB9BF00660E53 /* QXCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXCollectionViewCell.m; sourceTree = "<group>"; };
 		B06322851ECEC37900660E53 /* QXRefreshCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXRefreshCollectionViewController.h; sourceTree = "<group>"; };
 		B06322861ECEC37900660E53 /* QXRefreshCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXRefreshCollectionViewController.m; sourceTree = "<group>"; };
+		B06322881ED2B1FC00660E53 /* QXWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXWebViewController.h; sourceTree = "<group>"; };
+		B06322891ED2B1FC00660E53 /* QXWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXWebViewController.m; sourceTree = "<group>"; };
+		B063228B1ED2C8AB00660E53 /* Groovy.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Groovy.pdf; path = ../Groovy.pdf; sourceTree = "<group>"; };
+		B063228D1ED2CAA700660E53 /* out.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = out.txt; sourceTree = "<group>"; };
+		B063228F1ED43B4500660E53 /* QXWKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXWKWebViewController.h; sourceTree = "<group>"; };
+		B06322901ED43B4500660E53 /* QXWKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXWKWebViewController.m; sourceTree = "<group>"; };
+		B06322921ED532EE00660E53 /* local.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = local.html; sourceTree = "<group>"; };
+		B06322941ED5903F00660E53 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		E6F2309282E1B463303DC9BD /* Pods-QXIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QXIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QXIOS/Pods-QXIOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B06322951ED5903F00660E53 /* JavaScriptCore.framework in Frameworks */,
 				B036AF9D1EB1D08F000F177E /* QuartzCore.framework in Frameworks */,
 				B036AF9B1EB1D06E000F177E /* CoreGraphics.framework in Frameworks */,
 				30894D025D5A407D6BFE5E9F /* Pods_QXIOS.framework in Frameworks */,
@@ -184,6 +199,7 @@
 		B012B07F1EC59C4A00844E05 /* MJRefreshStudy */ = {
 			isa = PBXGroup;
 			children = (
+				B06322921ED532EE00660E53 /* local.html */,
 				B05848F31EC9AEC0004F8380 /* Custom */,
 				B05848EF1EC98DFA004F8380 /* Category */,
 				B012B0801EC59C8B00844E05 /* QXMJRefreshStudyMainControllerTableViewController.h */,
@@ -201,6 +217,10 @@
 				B06322831ECEB9BF00660E53 /* QXCollectionViewCell.m */,
 				B06322851ECEC37900660E53 /* QXRefreshCollectionViewController.h */,
 				B06322861ECEC37900660E53 /* QXRefreshCollectionViewController.m */,
+				B06322881ED2B1FC00660E53 /* QXWebViewController.h */,
+				B06322891ED2B1FC00660E53 /* QXWebViewController.m */,
+				B063228F1ED43B4500660E53 /* QXWKWebViewController.h */,
+				B06322901ED43B4500660E53 /* QXWKWebViewController.m */,
 			);
 			path = MJRefreshStudy;
 			sourceTree = "<group>";
@@ -255,6 +275,8 @@
 			isa = PBXGroup;
 			children = (
 				B030F7BD1EAA0F2C002677F5 /* main.m */,
+				B063228D1ED2CAA700660E53 /* out.txt */,
+				B063228B1ED2C8AB00660E53 /* Groovy.pdf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -262,6 +284,7 @@
 		B036AF991EB1D06E000F177E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B06322941ED5903F00660E53 /* JavaScriptCore.framework */,
 				B036AF9C1EB1D08F000F177E /* QuartzCore.framework */,
 				B036AF9A1EB1D06E000F177E /* CoreGraphics.framework */,
 				115E184374D1CAAE5F3DA810 /* Pods_QXIOS.framework */,
@@ -370,10 +393,13 @@
 				B030F7CF1EAA0F2C002677F5 /* LaunchScreen.storyboard in Resources */,
 				B030F7CC1EAA0F2C002677F5 /* Assets.xcassets in Resources */,
 				B012B0751EBAF12500844E05 /* qx.bundle in Resources */,
+				B06322931ED532EE00660E53 /* local.html in Resources */,
 				B06322811ECEB68B00660E53 /* CollectionReusableView.xib in Resources */,
 				B012B0521EB9A5B200844E05 /* SimpleViewController.xib in Resources */,
 				B012B0691EBACD9000844E05 /* bookdemo.storyboard in Resources */,
+				B063228E1ED2CAA700660E53 /* out.txt in Resources */,
 				B063227F1ECEB51400660E53 /* CollectionViewCell.xib in Resources */,
+				B063228C1ED2C8AB00660E53 /* Groovy.pdf in Resources */,
 				B030F7C71EAA0F2C002677F5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,10 +480,12 @@
 				B030F7CA1EAA0F2C002677F5 /* QXIOS.xcdatamodeld in Sources */,
 				B05848FC1ECAA5F6004F8380 /* QXRefreshGifHeader.m in Sources */,
 				B030F7DC1EAA11C4002677F5 /* QXFileManage.m in Sources */,
+				B063228A1ED2B1FC00660E53 /* QXWebViewController.m in Sources */,
 				B06322871ECEC37900660E53 /* QXRefreshCollectionViewController.m in Sources */,
 				B012B0871EC5A03400844E05 /* QXDataModle.m in Sources */,
 				B05849051ECAD6D1004F8380 /* QXCustomRefreshHeader.m in Sources */,
 				B036AF921EB07CE5000F177E /* QXWaveControllerViewController.m in Sources */,
+				B06322911ED43B4500660E53 /* QXWKWebViewController.m in Sources */,
 				B036AF981EB09F16000F177E /* UIColor+StringColor.m in Sources */,
 				B06322771ECC1B1D00660E53 /* QXCustomBackStateFooter.m in Sources */,
 				B030F7BE1EAA0F2C002677F5 /* main.m in Sources */,

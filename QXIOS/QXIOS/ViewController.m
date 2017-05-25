@@ -11,6 +11,7 @@
 #import "UIColor+StringColor.h"
 #import "QXCollectionViewController.h"
 #import "QXRefreshCollectionViewController.h"
+#import "QXWebViewController.h"
 
 @interface ViewController (){
     CATextLayer *textLayer;
@@ -38,7 +39,12 @@
     
         UIViewController *refreshVc=[[QXRefreshCollectionViewController alloc] init];
     
-        [self presentViewController:viewController animated:YES completion:^{
+    UIViewController *webView=[storyBoard instantiateViewControllerWithIdentifier:@"WebViewController"];
+    
+        UIViewController *wkWebView=[storyBoard instantiateViewControllerWithIdentifier:@"WKWebViewController"];
+    
+    
+        [self presentViewController:wkWebView animated:YES completion:^{
             NSLog(@"启动了QXRefreshStudyMainController");
         }];
     

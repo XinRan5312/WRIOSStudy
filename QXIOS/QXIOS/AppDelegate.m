@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "SimpleViewController.h"
 #import "QXWindow.h"
-
+#import "QXWebViewController.h"
 @interface AppDelegate ()
 
 //一下下个变量都是为了测试UIWindow而自己创建的
@@ -41,6 +41,7 @@
 
 //    [self testUIWindow];
     
+    
     return YES;
 }
 
@@ -53,7 +54,7 @@
     
     self.window.backgroundColor=[UIColor yellowColor];
     
-    self.window.rootViewController=[[UIViewController alloc] init];
+    self.window.rootViewController=[[QXWebViewController alloc] init];
     
     [self.window makeKeyAndVisible];
     NSLog(@"self.window-one的WindowLevel=%f", [UIApplication sharedApplication].keyWindow.windowLevel);
