@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -71,6 +73,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tED-6l-1ll" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="906" y="72"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rxZ-YN-k9g">
+            <objects>
+                <viewController id="6Wv-05-go7" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mIM-lT-jyc"/>
+                        <viewControllerLayoutGuide type="bottom" id="2d3-jI-IrK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZIU-0n-Y79">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOE-C6-AXx">
+                                <rect key="frame" x="16" y="50" width="64" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMX-EV-JDu">
+                                <rect key="frame" x="16" y="100" width="50" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFJ-1E-ElA">
+                                <rect key="frame" x="100" y="124" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Hd-QZ-BTH">
+                                <rect key="frame" x="297" y="120" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Knz-FR-sZf">
+                                <rect key="frame" x="164.16328600405905" y="242" width="46" height="30.000000000000028"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uw7-9g-qyE">
+                                <rect key="frame" x="234" y="242" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FFJ-1E-ElA" firstAttribute="top" secondItem="mIM-lT-jyc" secondAttribute="bottom" multiplier="1.2" constant="100" id="20A-aS-lTT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4Hd-QZ-BTH" secondAttribute="trailing" constant="16" id="2Nh-CU-xWu"/>
+                            <constraint firstItem="uw7-9g-qyE" firstAttribute="top" secondItem="mIM-lT-jyc" secondAttribute="bottom" constant="222" id="AUr-o0-Slp"/>
+                            <constraint firstItem="uw7-9g-qyE" firstAttribute="leading" secondItem="Knz-FR-sZf" secondAttribute="trailing" constant="20" id="PS7-Dx-txc"/>
+                            <constraint firstItem="FFJ-1E-ElA" firstAttribute="leading" secondItem="LMX-EV-JDu" secondAttribute="trailing" multiplier="1.5" constant="10" id="cSf-8S-1Tt"/>
+                            <constraint firstItem="4Hd-QZ-BTH" firstAttribute="top" secondItem="mIM-lT-jyc" secondAttribute="bottom" constant="100" id="uiT-pi-GJd"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="23A-Un-lCp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1695.2" y="-8.5457271364317844"/>
         </scene>
         <!--Item-->
         <scene sceneID="JDc-9l-wpf">

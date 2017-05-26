@@ -1,0 +1,13 @@
+/* 
+  InfoPlist.strings
+  QXIOS
+
+  Created by 新然 on 2017/5/26.
+  Copyright © 2017年 com.wrqx. All rights reserved.
+ 
+ 
+ 应用名称国际化  必须是建立一个名字是InfoPlist的strings File
+ 
+*/
+
+CFBundleDisplayName = "国际化APP名字";

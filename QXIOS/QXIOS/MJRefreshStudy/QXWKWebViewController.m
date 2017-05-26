@@ -8,6 +8,8 @@
 
 #import "QXWKWebViewController.h"
 #import "WebKit/WebKit.h"
+#import "MJRefresh.h"
+#import "QXRefreshGifHeader.h"
 
 @interface QXWKWebViewController ()<WKUIDelegate,WKNavigationDelegate,WKScriptMessageHandler>
 
@@ -16,6 +18,7 @@
 @property(nonatomic,strong)UIProgressView *progressView;
 @property(nonatomic,copy)NSString *title;
 @property(nonatomic,copy)NSString *loading;
+
 
 @end
 
@@ -65,6 +68,12 @@
     //web内容控制者 通过js与web内容交互
     WKUserContentController *userContentController=[[WKUserContentController alloc]init];
     
+    // 图片缩放的js代码
+//    NSString *js = @"var count = document.images.length;for (var i = 0; i < count; i++) {var image = document.images[i];image.style.width=320;};window.alert('找到' + count + '张图');";
+//    
+//    // 根据JS字符串初始化WKUserScript对象
+//    WKUserScript *script = [[WKUserScript alloc] initWithSource:js injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:YES];
+    
     //OS 通过js改变web内容
     WKUserScript *userScript=[[WKUserScript alloc] initWithSource:@"document.body.style.fontSize=16" injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:YES];
     
@@ -105,7 +114,13 @@
                    forKeyPath:@"estimatedProgress"
                       options:NSKeyValueObservingOptionNew
                       context:nil];
+    //下拉刷新
+    __weak UIScrollView *scroview=_webView.scrollView;
     
+    scroview.mj_header=[QXRefreshGifHeader headerWithRefreshingBlock:^{
+        [_webView reload];
+    }];
+    [scroview.mj_header beginRefreshing];////别忘了在finish的时候endFresh
     
     
 }
@@ -342,6 +357,11 @@
     //完成跳转
     
     NSLog(@"didFinishNavigation");
+    //模拟三秒加载时间
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+          [webView.scrollView.mj_header endRefreshing];
+    });
+  
 
 }
 
@@ -354,11 +374,14 @@
     //跳转失败
     
     NSLog(@"didFailNavigation");
-
+    //模拟三秒加载时间
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [webView.scrollView.mj_header endRefreshing];
+    });
 
 }
 
-#pragma mark - WKUIDelegate
+#pragma mark - WKUIDelegate 接口的两个方法
 #if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_9_0
 - (void)webViewDidClose:(WKWebView *)webView {
     NSLog(@"%s", __FUNCTION__);
@@ -417,6 +440,27 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    
+    [self setNeedsStatusBarAppearanceUpdate];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
 }
 
 /*

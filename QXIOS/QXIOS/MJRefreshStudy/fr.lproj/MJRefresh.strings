@@ -1,0 +1,33 @@
+
+/* Class = "UILabel"; text = "webView"; ObjectID = "22Q-96-rnV"; */
+"22Q-96-rnV.text" = "webView";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "8h1-26-H64"; */
+"8h1-26-H64.title" = "Back";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "AQF-EQ-Qmf"; */
+"AQF-EQ-Qmf.text" = "Subtitle";
+
+/* Class = "UIBarButtonItem"; title = "go to WK"; ObjectID = "D8M-hv-R55"; */
+"D8M-hv-R55.title" = "go to WK";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "L33-7C-EmZ"; */
+"L33-7C-EmZ.title" = "Back";
+
+/* Class = "UINavigationItem"; title = "MJRefresh演习"; ObjectID = "fMc-W1-KQQ"; */
+"fMc-W1-KQQ.title" = "MJRefresh演习";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "goO-el-BWC"; */
+"goO-el-BWC.text" = "Title";
+
+/* Class = "UINavigationItem"; title = "The True MJRfresh演示"; ObjectID = "joa-Ne-Dhh"; */
+"joa-Ne-Dhh.title" = "The True MJRfresh演示";
+
+/* Class = "UIBarButtonItem"; title = "Home"; ObjectID = "nKl-et-1yI"; */
+"nKl-et-1yI.title" = "Home";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "oE5-1w-gcy"; */
+"oE5-1w-gcy.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "qIL-wO-EJI"; */
+"qIL-wO-EJI.text" = "Title";
