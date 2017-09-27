@@ -1,121 +1,25 @@
 //
 //  AppDelegate.m
-//  QXIOS
+//  TestOnMyPhone
 //
-//  Created by 新然 on 2017/4/21.
+//  Created by 新然 on 2017/6/9.
 //  Copyright © 2017年 com.wrqx. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "SimpleViewController.h"
-#import "QXWindow.h"
-#import "QXWebViewController.h"
-#import "QXCustomDataProtocol.h"
-@interface AppDelegate ()
 
-//一下下个变量都是为了测试UIWindow而自己创建的
-@property(strong,nonatomic)UIWindow *normalWindow;
-@property(nonatomic,strong)UIWindow *coverStatusBarWindow;
-@property(nonatomic,strong)UIWindow *alertLevelWindow;
+@interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
 
-
-
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    CGPoint p=[[touches anyObject] locationInView:self.inputView];
-
-    NSLog(@"touchsWindowBegain-X=%zd-Y=%zd",p.x,p.y);
-}
-
--(void)coverWindowOnClick{
-   
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"ClickCoverWindow" object:self userInfo:nil];
-    NSLog(@"onClick coverStatusWindow");
-
-}
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
-//    [self testUIWindow];
-    //注册了以后自己自定义的Protocol才能起作用
-    [NSURLProtocol registerClass:[QXCustomDataProtocol class]];
-    
-    
+    // Override point for customization after application launch.
     return YES;
 }
 
-//练习UIWindow的使用和特点
--(void)testUIWindow{
-    
-    //一个满屏的normal级别的window我们一般会在启动APP做这个工作。给APPDelegate中的window属性初始化，并且让其可见
-    
-    self.window=[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen]bounds]];
-    
-    self.window.backgroundColor=[UIColor yellowColor];
-    
-    self.window.rootViewController=[[QXWebViewController alloc] init];
-    
-    [self.window makeKeyAndVisible];
-    NSLog(@"self.window-one的WindowLevel=%f", [UIApplication sharedApplication].keyWindow.windowLevel);
-    
-    
-    //自己创建一个全屏的window 并且makeKeyAndVisible
-    CGSize size=[[UIScreen mainScreen]bounds].size;
-    
-    _normalWindow=[[UIWindow alloc] initWithFrame:CGRectMake(0, 100, size.width, size.height-100)];
-    
-    _normalWindow.backgroundColor=[UIColor grayColor];
-    _normalWindow.windowLevel=UIWindowLevelNormal;//级别设置为Normal
-    _normalWindow.rootViewController=[[UIViewController alloc] init];
-    
-    UITextField *textFiled=[[UITextField alloc]initWithFrame:CGRectMake(10, 50, 100, 50)];
-    
-    textFiled.borderStyle=UITextBorderStyleRoundedRect;
-    
-    [_normalWindow addSubview:textFiled];//因为UIWindow继承UIView
-    
-    UITapGestureRecognizer *gestureRecongnizer=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(coverWindowOnClick)];
-    
-    [_normalWindow addGestureRecognizer:gestureRecongnizer];
-    
-   // [_normalWindow makeKeyAndVisible];//自己让自己设置为keywindow显示
-    
-    NSLog(@"self.window-two的WindowLevel=%f", [UIApplication sharedApplication].keyWindow.windowLevel);
-    
-    //定义一个statusBar级别的window
-    _coverStatusBarWindow=[[UIWindow alloc] initWithFrame:CGRectMake(0, 100, size.width, 50)];
-    
-    _coverStatusBarWindow.windowLevel=UIWindowLevelStatusBar;
-    
-    _coverStatusBarWindow.backgroundColor=[UIColor blueColor];
-    
-    _coverStatusBarWindow.rootViewController=[[UIViewController alloc] init];
-    
-    UITextField *text=[[UITextField alloc] initWithFrame:CGRectMake(150, 0, 150, 30)];
-    
-    text.borderStyle=UITextBorderStyleBezel;
-    
-    [_coverStatusBarWindow addSubview:text];
-    
-    UITapGestureRecognizer *ges=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(coverWindowOnClick)];
-    
-    [_coverStatusBarWindow addGestureRecognizer:ges];
-    
-    [_coverStatusBarWindow makeKeyAndVisible];
-    
-    [_normalWindow makeKeyAndVisible];//挡不住_coverStatusBarWindow因为没有人家级别高，最后显示的只能挡住同级别的
-    
-    //而且不管是哪个window只要是对用户可见，都会相应点击事件
-     NSLog(@"self.window-three的WindowLevel=%f", [UIApplication sharedApplication].keyWindow.windowLevel);
-    
-     NSLog(@"self.windows的%@",[UIApplication sharedApplication].windows);
-
-
-}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -136,12 +40,6 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    
-    
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        [QXWindow show];
-    });
 }
 
 
@@ -160,7 +58,7 @@
     // The persistent container for the application. This implementation creates and returns a container, having loaded the store for the application to it.
     @synchronized (self) {
         if (_persistentContainer == nil) {
-            _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"QXIOS"];
+            _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"TestOnMyPhone"];
             [_persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *storeDescription, NSError *error) {
                 if (error != nil) {
                     // Replace this implementation with code to handle the error appropriately.

@@ -22,6 +22,7 @@
 		B02430B21ED7C363005EBF9F /* MJRefresh.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B02430B41ED7C363005EBF9F /* MJRefresh.storyboard */; };
 		B02430BF1ED7C427005EBF9F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B02430C11ED7C427005EBF9F /* InfoPlist.strings */; };
 		B02430C81ED7C6E6005EBF9F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B02430C71ED7C6E6005EBF9F /* Localizable.strings */; };
+		B02430CC1ED91940005EBF9F /* QXCustomDataProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = B02430CB1ED91940005EBF9F /* QXCustomDataProtocol.m */; };
 		B030F7BE1EAA0F2C002677F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B030F7BD1EAA0F2C002677F5 /* main.m */; };
 		B030F7C11EAA0F2C002677F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B030F7C01EAA0F2C002677F5 /* AppDelegate.m */; };
 		B030F7C41EAA0F2C002677F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B030F7C31EAA0F2C002677F5 /* ViewController.m */; };
@@ -57,6 +58,7 @@
 		B06322911ED43B4500660E53 /* QXWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B06322901ED43B4500660E53 /* QXWKWebViewController.m */; };
 		B06322931ED532EE00660E53 /* local.html in Resources */ = {isa = PBXBuildFile; fileRef = B06322921ED532EE00660E53 /* local.html */; };
 		B06322951ED5903F00660E53 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B06322941ED5903F00660E53 /* JavaScriptCore.framework */; };
+		B0A01D201EDE5241005899B1 /* QXCustomWebProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A01D1F1EDE5241005899B1 /* QXCustomWebProtocol.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +104,8 @@
 		B02430C31ED7C42B005EBF9F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B02430C41ED7C42C005EBF9F /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B02430C71ED7C6E6005EBF9F /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = /Users/xinran/Documents/WRIOSStudy/QXIOS/QXIOS/Localizable.strings; sourceTree = "<absolute>"; };
+		B02430CA1ED91940005EBF9F /* QXCustomDataProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXCustomDataProtocol.h; sourceTree = "<group>"; };
+		B02430CB1ED91940005EBF9F /* QXCustomDataProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXCustomDataProtocol.m; sourceTree = "<group>"; };
 		B030F7B91EAA0F2C002677F5 /* QXIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QXIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B030F7BD1EAA0F2C002677F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B030F7BF1EAA0F2C002677F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 		B06322901ED43B4500660E53 /* QXWKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXWKWebViewController.m; sourceTree = "<group>"; };
 		B06322921ED532EE00660E53 /* local.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = local.html; sourceTree = "<group>"; };
 		B06322941ED5903F00660E53 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		B0A01D1E1EDE5241005899B1 /* QXCustomWebProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXCustomWebProtocol.h; sourceTree = "<group>"; };
+		B0A01D1F1EDE5241005899B1 /* QXCustomWebProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXCustomWebProtocol.m; sourceTree = "<group>"; };
 		E6F2309282E1B463303DC9BD /* Pods-QXIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QXIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QXIOS/Pods-QXIOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -238,6 +244,17 @@
 			path = MJRefreshStudy;
 			sourceTree = "<group>";
 		};
+		B02430C91ED918D3005EBF9F /* CustomURLProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				B02430CA1ED91940005EBF9F /* QXCustomDataProtocol.h */,
+				B02430CB1ED91940005EBF9F /* QXCustomDataProtocol.m */,
+				B0A01D1E1EDE5241005899B1 /* QXCustomWebProtocol.h */,
+				B0A01D1F1EDE5241005899B1 /* QXCustomWebProtocol.m */,
+			);
+			path = CustomURLProtocol;
+			sourceTree = "<group>";
+		};
 		B030F7B01EAA0F2C002677F5 = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +276,7 @@
 		B030F7BB1EAA0F2C002677F5 /* QXIOS */ = {
 			isa = PBXGroup;
 			children = (
+				B02430C91ED918D3005EBF9F /* CustomURLProtocol */,
 				B012B07F1EC59C4A00844E05 /* MJRefreshStudy */,
 				B012B04B1EB99FFA00844E05 /* bookdemo */,
 				B030F7BF1EAA0F2C002677F5 /* AppDelegate.h */,
@@ -375,6 +393,7 @@
 				TargetAttributes = {
 					B030F7B81EAA0F2C002677F5 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = AV8D32L2KT;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -482,6 +501,7 @@
 				B058490B1ECAE00D004F8380 /* QXRefreshBackGifFooter.m in Sources */,
 				B036AF951EB07D6A000F177E /* QXWaveView.m in Sources */,
 				B012B0551EB9ADB800844E05 /* SimpleViewController2.m in Sources */,
+				B02430CC1ED91940005EBF9F /* QXCustomDataProtocol.m in Sources */,
 				B06322741ECC19F700660E53 /* QXCustomAutoFooter.m in Sources */,
 				B012B07B1EBC2A7E00844E05 /* CustomViewOne.m in Sources */,
 				B012B0511EB9A5B200844E05 /* SimpleViewController.m in Sources */,
@@ -506,6 +526,7 @@
 				B06322911ED43B4500660E53 /* QXWKWebViewController.m in Sources */,
 				B036AF981EB09F16000F177E /* UIColor+StringColor.m in Sources */,
 				B06322771ECC1B1D00660E53 /* QXCustomBackStateFooter.m in Sources */,
+				B0A01D201EDE5241005899B1 /* QXCustomWebProtocol.m in Sources */,
 				B030F7BE1EAA0F2C002677F5 /* main.m in Sources */,
 				B05848EE1EC98C64004F8380 /* QXShowTableViewController.m in Sources */,
 				B05849021ECAADFE004F8380 /* QXTempViewController.m in Sources */,
@@ -673,6 +694,7 @@
 			baseConfigurationReference = E6F2309282E1B463303DC9BD /* Pods-QXIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AV8D32L2KT;
 				INFOPLIST_FILE = QXIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ran.QXIOS;
@@ -685,6 +707,7 @@
 			baseConfigurationReference = AF0C0B7B8E61C3FC13AD100E /* Pods-QXIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AV8D32L2KT;
 				INFOPLIST_FILE = QXIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ran.QXIOS;
